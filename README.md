@@ -1,10 +1,11 @@
 # Digital-electronics-2
 
 ## LINKS
-### Link to EDA PlayGround
-[EDA PlayGroud](https://www.edaplayground.com/playgrounds/user/242729)
-### Link to GitHub repository
-[GitHub repository](https://github.com/amwellius/Digital-electronics-1)
+### Link to nowhere
+[do not click here](https://www.csfd.cz/film/8545-vrchni-prchni/prehled/)
+### Links to GitHub repositories
+[GitHub repository  Digital-electronics-1 ](https://github.com/amwellius/Digital-electronics-1)   <br/> 
+[GitHub repository  Digital-electronics-2 ](https://github.com/amwellius/Digital-electronics-2)
 
 
-![alt text](https://www.vutbr.cz/images/apple-touch-icon.png "Logo Title Text 1")
+![alt text](https://www.vut.cz/i/images/favicon_ostra.ico "Logo Title Text 1")
