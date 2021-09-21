@@ -7,4 +7,4 @@
 [GitHub repository](https://github.com/amwellius/Digital-electronics-1)
 
 
-![alt text](https://www.vutbr.cz/images/apple-touch-icon.png "Logo Title Text 1")
+![alt text](https://www.vut.cz/i/images/favicon_ostra.ico "Logo Title Text 1")
