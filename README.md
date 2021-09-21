@@ -1,9 +1,9 @@
 # Digital-electronics-2
 
 ## LINKS
-### Link to EDA PlayGround
-[EDA PlayGroud](https://www.edaplayground.com/playgrounds/user/242729)
-### Link to GitHub repository
+### Link nowhere
+[do not click here](https://www.csfd.cz/film/8545-vrchni-prchni/prehled/)
+### Links to GitHub repositories
 [GitHub repository  Digital-electronics-1 ](https://github.com/amwellius/Digital-electronics-1)   <br/> 
 [GitHub repository  Digital-electronics-2 ](https://github.com/amwellius/Digital-electronics-2)
 
