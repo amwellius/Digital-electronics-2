@@ -14,8 +14,8 @@
 
 
 **Time Window:** 
-   - *Start of Project*: *April 7*
-   - *End of Project*:   *May 4* <br/>
+   - |*Start of Project*|: |*April 7*|
+   - |*End of Project*|:   |*May 4*| <br/>
 
 
 
