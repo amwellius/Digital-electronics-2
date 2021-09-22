@@ -19,6 +19,7 @@ Link to your `Digital-electronics-2` GitHub repository:
 
 | **b** | **a** |**b or a** | **b and a** | **b xor a** | **not b** |
 | :-: | :-: | :-: | :-: | :-: | :-: |
+|  |  | **b | a** | **b & a** | **b ^ a** | **~ b** |
 | 0 | 0 |  |  |  |  |
 | 0 | 1 |  |  |  |  |
 | 1 | 0 |  |  |  |  |
