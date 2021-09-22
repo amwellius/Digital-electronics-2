@@ -20,7 +20,10 @@
  * directives. This is a common mistake.
  */
 #define LED_GREEN   PB5 // AVR pin where green LED is connected             //vsetko co najde ako LED_green nahradi ako PB5
-#define SHORT_DELAY 1000 // Delay in milliseconds
+#define LINE_DELAY  500 // LINE
+#define SHORT_DELAY 150 // VERY SHORT DELAY (in ONE letter)
+#define DOT_DELAY   250 // DOT
+#define LONG_DELAY  800 // NEW Letter
 #ifndef F_CPU           // Preprocessor directive allows for conditional
                         // compilation. The #ifndef means "if not defined".
 # define F_CPU 16000000 // CPU frequency in Hz required for delay
@@ -52,12 +55,124 @@ int main(void)      //funkcia
     // Infinite loop
     while (1)
     {
-        // Pause several milliseconds
-        _delay_ms(SHORT_DELAY);
+            
+         //WORD "MORSE CODE":
+         
+         _delay_ms(LONG_DELAY);
+         _delay_ms(LONG_DELAY);
 
-        // Invert LED in Data Register
-        // PORTB = PORTB xor 0010 0000
-        PORTB = PORTB ^ (1<<LED_GREEN);
+        //M --
+        PORTB = PORTB ^ (1<<LED_GREEN);     //LED ON
+        _delay_ms(LINE_DELAY);
+        PORTB = PORTB & ~(1<<LED_GREEN);    //LED OFF
+        _delay_ms(SHORT_DELAY);
+        PORTB = PORTB ^ (1<<LED_GREEN);     //LED ON
+        _delay_ms(LINE_DELAY);
+        PORTB = PORTB & ~(1<<LED_GREEN);    //LED OFF
+        _delay_ms(LONG_DELAY);
+
+        //O ---
+        PORTB = PORTB ^ (1<<LED_GREEN);     //LED ON
+        _delay_ms(LINE_DELAY);
+        PORTB = PORTB & ~(1<<LED_GREEN);    //LED OFF
+        _delay_ms(SHORT_DELAY);
+        PORTB = PORTB ^ (1<<LED_GREEN);     //LED ON
+        _delay_ms(LINE_DELAY);
+        PORTB = PORTB & ~(1<<LED_GREEN);    //LED OFF
+        _delay_ms(SHORT_DELAY);
+        PORTB = PORTB ^ (1<<LED_GREEN);     //LED ON
+        _delay_ms(LINE_DELAY);
+        PORTB = PORTB & ~(1<<LED_GREEN);    //LED OFF
+        _delay_ms(LONG_DELAY);
+
+        //R .-.
+        PORTB = PORTB ^ (1<<LED_GREEN);     //LED ON
+        _delay_ms(DOT_DELAY);
+        PORTB = PORTB & ~(1<<LED_GREEN);    //LED OFF
+        _delay_ms(SHORT_DELAY);
+        PORTB = PORTB ^ (1<<LED_GREEN);     //LED ON
+        _delay_ms(LINE_DELAY);
+        PORTB = PORTB & ~(1<<LED_GREEN);    //LED OFF
+        _delay_ms(SHORT_DELAY);
+        PORTB = PORTB ^ (1<<LED_GREEN);     //LED ON
+        _delay_ms(DOT_DELAY);
+        PORTB = PORTB & ~(1<<LED_GREEN);    //LED OFF
+        _delay_ms(LONG_DELAY);
+
+        //S ---
+        PORTB = PORTB ^ (1<<LED_GREEN);     //LED ON
+        _delay_ms(DOT_DELAY);
+        PORTB = PORTB & ~(1<<LED_GREEN);    //LED OFF
+        _delay_ms(SHORT_DELAY);
+        PORTB = PORTB ^ (1<<LED_GREEN);     //LED ON
+        _delay_ms(DOT_DELAY);
+        PORTB = PORTB & ~(1<<LED_GREEN);    //LED OFF
+        _delay_ms(SHORT_DELAY);
+        PORTB = PORTB ^ (1<<LED_GREEN);     //LED ON
+        _delay_ms(DOT_DELAY);
+        PORTB = PORTB & ~(1<<LED_GREEN);    //LED OFF
+        _delay_ms(LONG_DELAY);
+
+        //E .
+        PORTB = PORTB ^ (1<<LED_GREEN);     //LED ON
+        _delay_ms(DOT_DELAY);
+        PORTB = PORTB & ~(1<<LED_GREEN);    //LED OFF
+        _delay_ms(LONG_DELAY);
+        
+        //
+        //C -.-.
+        PORTB = PORTB ^ (1<<LED_GREEN);     //LED ON
+        _delay_ms(LINE_DELAY);
+        PORTB = PORTB & ~(1<<LED_GREEN);    //LED OFF
+        _delay_ms(SHORT_DELAY);
+        PORTB = PORTB ^ (1<<LED_GREEN);     //LED ON
+        _delay_ms(DOT_DELAY);
+        PORTB = PORTB & ~(1<<LED_GREEN);    //LED OFF
+        _delay_ms(SHORT_DELAY);
+        PORTB = PORTB ^ (1<<LED_GREEN);     //LED ON
+        _delay_ms(LINE_DELAY);
+        PORTB = PORTB & ~(1<<LED_GREEN);    //LED OFF
+        _delay_ms(SHORT_DELAY);
+        PORTB = PORTB ^ (1<<LED_GREEN);     //LED ON
+        _delay_ms(DOT_DELAY);
+        PORTB = PORTB & ~(1<<LED_GREEN);    //LED OFF
+        _delay_ms(LONG_DELAY);
+
+        //O ---
+        PORTB = PORTB ^ (1<<LED_GREEN);     //LED ON
+        _delay_ms(LINE_DELAY);
+        PORTB = PORTB & ~(1<<LED_GREEN);    //LED OFF
+        _delay_ms(SHORT_DELAY);
+        PORTB = PORTB ^ (1<<LED_GREEN);     //LED ON
+        _delay_ms(LINE_DELAY);
+        PORTB = PORTB & ~(1<<LED_GREEN);    //LED OFF
+        _delay_ms(SHORT_DELAY);
+        PORTB = PORTB ^ (1<<LED_GREEN);     //LED ON
+        _delay_ms(LINE_DELAY);
+        PORTB = PORTB & ~(1<<LED_GREEN);    //LED OFF
+        _delay_ms(LONG_DELAY);
+
+        //D -..
+        PORTB = PORTB ^ (1<<LED_GREEN);     //LED ON
+        _delay_ms(LINE_DELAY);
+        PORTB = PORTB & ~(1<<LED_GREEN);    //LED OFF
+        _delay_ms(SHORT_DELAY);
+        PORTB = PORTB ^ (1<<LED_GREEN);     //LED ON
+        _delay_ms(DOT_DELAY);
+        PORTB = PORTB & ~(1<<LED_GREEN);    //LED OFF
+        _delay_ms(SHORT_DELAY);
+        PORTB = PORTB ^ (1<<LED_GREEN);     //LED ON
+        _delay_ms(DOT_DELAY);
+        PORTB = PORTB & ~(1<<LED_GREEN);    //LED OFF
+        _delay_ms(LONG_DELAY);
+
+        //E .
+        PORTB = PORTB ^ (1<<LED_GREEN);     //LED ON
+        _delay_ms(DOT_DELAY);
+        PORTB = PORTB & ~(1<<LED_GREEN);    //LED OFF
+        _delay_ms(LONG_DELAY);
+
+
     }
 
     // Will never reach this
