@@ -26,6 +26,34 @@ Link to your `Digital-electronics-2` GitHub repository:
 | 1 | 0 | Output | No | Low Output |
 | 1 | 1 | Output | No | High Output |
 
+| **Port** | **Pin** | **Input/output usage?** |
+| :-: | :-: | :-- |
+| A | x | Microcontroller ATmega328P does not contain port A |
+| B | 0 | Yes (Arduino pin 8) |
+|   | 1 | pin 9 |
+|   | 2 | pin 10 |
+|   | 3 | pin 11 |
+|   | 4 | pin 12 |
+|   | 5 | pin 13 |
+|   | 6 | NO |
+|   | 7 | NO |
+| C | 0 | Yes (Arduino pin A0) |
+|   | 1 | pin A1 |
+|   | 2 | pin A2 |
+|   | 3 | pin A3 |
+|   | 4 | pin A4 |
+|   | 5 | pin A5 |
+|   | 6 | NO |
+|   | 7 | NO |
+| D | 0 | Yes (Arduino pin RX<-0) |
+|   | 1 | TX ->0 |
+|   | 2 | pin 2 |
+|   | 3 | pin 3 |
+|   | 4 | pin 4 |
+|   | 5 | pin 5 |
+|   | 6 | pin 6 |
+|   | 7 | pin 7 |
+
 2. Part of the C code listing with syntax highlighting, which blinks alternately with a pair of LEDs; let one LED is connected to port B and the other to port C:
 
 ```c
