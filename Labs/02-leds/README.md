@@ -2,7 +2,7 @@
 
 Link to your `Digital-electronics-2` GitHub repository:
 
-    [GitHub Link](https://github.com/amwellius/Digital-electronics-2)
+   [GitHub Link](https://github.com/amwellius/Digital-electronics-2)
 
 
 
@@ -60,22 +60,19 @@ Link to your `Digital-electronics-2` GitHub repository:
 ```c
 int main(void)
 {
-    // Green LED at port B
-    // Set pin as output in Data Direction Register...
-    DDRB = DDRB | (1<<LED_GREEN);
-    // ...and turn LED off in Data Register
-    PORTB = PORTB & ~(1<<LED_GREEN);
 
-    // Configure the second LED at port C
-    // WRITE YOUR CODE HERE
+    DDRB = DDRB | (1<<LED_GREEN);
+    DDRC = DDRC | (1<<LED_RED);
 
     // Infinite loop
     while (1)
     {
         // Pause several milliseconds
-        _delay_ms(BLINK_DELAY);
-
-        // WRITE YOUR CODE HERE
+        _delay_ms(BLINK_DELAY);        
+        PORTC = PORTC ^ (1<<LED_RED);       //LED ON (toogle OFF)
+        _delay_ms(BLINK_DELAY);   
+        PORTB = PORTB ^ (1<<LED_GREEN);     //LED ON (toogle OFF)
+ 
     }
 
     // Will never reach this
@@ -89,17 +86,29 @@ int main(void)
 1. Part of the C code listing with syntax highlighting, which toggles LEDs only if push button is pressed. Otherwise, the value of the LEDs does not change. Let the push button is connected to port D:
 
 ```c
-    // Configure Push button at port D and enable internal pull-up resistor
-    // WRITE YOUR CODE HERE
+int main(void)
+{
+    DDRD = DDRD & ~(1<<BUTTON);
+    DDRC = DDRC | (1<<LED_RED);
 
+        // Configure Push button at port D and enable internal pull-up resistor
+        DDRD = DDRD | (0<<BUTTON);
+        PORTD = PORTD | (1<<BUTTON);        //pullup enabled
     // Infinite loop
     while (1)
     {
-        // Pause several milliseconds
-        _delay_ms(BLINK_DELAY);
+        if(bit_is_clear(PIND, PD7))
+        {
+            _delay_ms(BLINK_DELAY);
+            //led toogling only if button is pressed
+            PORTC = PORTC ^ (1<<LED_RED);       //LED ON (toogle OFF)
+            PORTB = PORTB ^ (1<<LED_GREEN);     //LED ON (toogle OFF)
+        }
 
-        // WRITE YOUR CODE HERE
     }
+    // Will never reach this
+    return 0;
+}
 ```
 
 
