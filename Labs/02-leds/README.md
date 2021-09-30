@@ -88,11 +88,11 @@ int main(void)
 ```c
 int main(void)
 {
-    DDRD = DDRD & ~(1<<BUTTON);
+    DDRB = DDRB | (1<<LED_GREEN);
     DDRC = DDRC | (1<<LED_RED);
 
         // Configure Push button at port D and enable internal pull-up resistor
-        DDRD = DDRD | (0<<BUTTON);
+        DDRD = DDRD & ~(1<<BUTTON);
         PORTD = PORTD | (1<<BUTTON);        //pullup enabled
     // Infinite loop
     while (1)
