@@ -1,31 +1,127 @@
-<circuit noLinAcc="5" Speed_per="100" type="simulide_0.4" animate="0" Speed_sps="1000000" reactStep="50" Simu_Step_nS="1000">
+<circuit Simu_Step_nS="1000" Speed_sps="1000000" type="simulide_0.4" Speed_per="100" animate="0" reactStep="50" noLinAcc="5">
 
-Unique  Id: Led-19: 
-Circuit Id: Led-19
-<item x="-428" labelrot="0" Color="0" valLabRot="0" valLabelx="0" id="Led-19" hflip="1" Resistance="0.59999999999999998" rotation="0" boardRot="-1000000" Show_id="false" y="-344" boardPos="-1e+06,-1e+06" MaxCurrent="0.029999999999999999" circPos="0,0" itemtype="Led" mainComp="false" Threshold="2.3999999999999999" labelx="-16" objectName="Led-19" valLabely="0" circRot="0" labely="-24" Grounded="false" vflip="1"/>
+Unique  Id: Ground-115: 
+Circuit Id: Ground-115
+<item Show_id="false" valLabely="0" rotation="0" y="-364" vflip="1" objectName="Ground-115" circRot="-5.4861292803319049e+303" mainComp="false" id="Ground-115" boardRot="-1000000" labelrot="0" boardPos="-1e+06,-1e+06" labelx="-16" valLabelx="0" itemtype="Ground" labely="8" circPos="0,0" valLabRot="0" hflip="1" x="-420"/>
 
-Unique  Id: Resistor-14: 
+Unique  Id: Voltage Source-113: 
+Circuit Id: Voltage Source-113
+<item Show_id="false" valLabely="11" Voltage="5" rotation="0" y="-404" vflip="1" objectName="Voltage Source-113" circRot="6.7903865310888714e-313" mainComp="false" id="Voltage Source-113" boardRot="-1000000" labelrot="0" boardPos="-1e+06,-1e+06" labelx="-40" valLabelx="-23" itemtype="Voltage Source" labely="-80" circPos="0,0" Show_Volt="true" valLabRot="0" hflip="1" x="-556" Unit=" V"/>
+
+Unique  Id: Node-109: 
+Circuit Id: Node-109
+<item Show_id="false" valLabely="0" rotation="0" y="-208" vflip="1" objectName="Node-109" circRot="1.3796130174327003e-306" mainComp="false" id="Node-109" boardRot="-1000000" labelrot="0" boardPos="-1e+06,-1e+06" labelx="-16" valLabelx="0" itemtype="Node" labely="-24" circPos="0,0" valLabRot="0" hflip="1" x="-540"/>
+
+Unique  Id: Push-98: 
+Circuit Id: Push-98
+<item Show_id="false" valLabely="0" rotation="0" y="-256" vflip="1" objectName="Push-98" Key="" Poles="1" Norm_Close="false" circRot="0" mainComp="false" id="Push-98" boardRot="-1000000" labelrot="0" boardPos="-1e+06,-1e+06" labelx="-16" valLabelx="0" itemtype="Push" labely="-24" circPos="0,0" valLabRot="0" hflip="1" x="-584"/>
+
+Unique  Id: Resistor-25: 
 Circuit Id: Resistor-14
-<item x="-480" labelrot="0" valLabRot="0" valLabelx="-16" id="Resistor-14" hflip="1" Resistance="147" rotation="0" boardRot="-1000000" Show_id="false" y="-344" boardPos="-1e+06,-1e+06" circPos="0,0" itemtype="Resistor" Show_res="true" mainComp="false" labelx="-12" objectName="Resistor-14" valLabely="6" circRot="0" labely="-20" Unit=" Ω" vflip="1"/>
+<item Show_id="false" valLabely="-168" rotation="90" y="-264" vflip="1" objectName="Resistor-25" circRot="0" mainComp="false" Show_res="true" id="Resistor-14" boardRot="-1000000" labelrot="0" boardPos="-1e+06,-1e+06" labelx="-12" valLabelx="-21" itemtype="Resistor" labely="-20" circPos="0,0" valLabRot="0" Resistance="147" hflip="1" x="-540" Unit=" Ω"/>
 
-Unique  Id: Ground-4: 
+Unique  Id: Ground-24: 
 Circuit Id: Ground-4
-<item x="-400" labelrot="0" valLabRot="0" valLabelx="0" id="Ground-4" hflip="1" rotation="0" boardRot="-1000000" Show_id="false" y="-304" boardPos="-1e+06,-1e+06" circPos="0,0" itemtype="Ground" mainComp="false" labelx="-16" objectName="Ground-4" valLabely="0" circRot="-5.4861292939301263e+303" labely="8" vflip="1"/>
+<item Show_id="false" valLabely="0" rotation="0" y="-176" vflip="1" objectName="Ground-24" circRot="-5.4861292939301263e+303" mainComp="false" id="Ground-4" boardRot="-1000000" labelrot="0" boardPos="-1e+06,-1e+06" labelx="-16" valLabelx="0" itemtype="Ground" labely="8" circPos="0,0" valLabRot="0" hflip="1" x="-492"/>
+
+Unique  Id: Led-23: 
+Circuit Id: Led-19
+<item Show_id="false" valLabely="0" rotation="90" y="-224" vflip="1" objectName="Led-23" Color="0" Grounded="false" circRot="0" mainComp="false" id="Led-19" boardRot="-1000000" labelrot="0" boardPos="-1e+06,-1e+06" MaxCurrent="0.029999999999999999" labelx="-16" valLabelx="0" itemtype="Led" labely="-24" Threshold="2.3999999999999999" circPos="0,0" valLabRot="0" Resistance="0.59999999999999998" hflip="1" x="-540"/>
 
 Unique  Id: atmega328-1: 
 Circuit Id: atmega328-1
-<item x="-548" labelrot="0" Init_gdb="false" valLabRot="0" valLabelx="0" id="atmega328-1" eeprom="255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255" hflip="1" rotation="0" boardRot="-1000000" Show_id="true" y="-424" boardPos="-1e+06,-1e+06" Name="" Mhz="16" Auto_Load="false" varList=",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,," circPos="0,0" itemtype="AVR" mainComp="false" labelx="0" objectName="atmega328-1" valLabely="0" circRot="3.2984676261797633e-316" labely="-20" Logic_Symbol="false" Program="../../../Documents/GitHub/Digital-electronics-2/Labs/01-tools/led/led/Debug/led.hex" vflip="1"/>
+<item Show_id="true" valLabely="0" rotation="90" y="-352" vflip="1" objectName="atmega328-1" Program="../../../../02-leds/leds/leds/leds/Debug/leds.hex" Logic_Symbol="false" circRot="3.2984676261797633e-316" mainComp="false" varList=",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,," id="atmega328-1" boardRot="-1000000" labelrot="0" Name="" boardPos="-1e+06,-1e+06" labelx="-14" valLabelx="0" Mhz="16" itemtype="AVR" Init_gdb="false" labely="-21" circPos="0,0" valLabRot="0" Auto_Load="false" hflip="1" x="-472" eeprom="255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255"/>
 
-Unique  Id: Connector-16: 
-Circuit Id: Connector-16
-<item x="-496" labelrot="0" enodeid="enode-16" valLabRot="0" valLabelx="0" id="Connector-16" startpinid="Resistor-14-lPin" hflip="1" rotation="0" boardRot="-1000000" Show_id="false" y="-344" boardPos="-1e+06,-1e+06" circPos="0,0" itemtype="Connector" mainComp="false" labelx="-16" objectName="Connector-16" valLabely="0" circRot="0" labely="-24" vflip="1" pointList="-496,-344,-508,-344" endpinid="atmega328-1-PB5"/>
+Unique  Id: Led-51: 
+Circuit Id: Led-19
+<item Show_id="false" valLabely="0" rotation="90" y="-224" vflip="1" objectName="Led-51" Color="0" Grounded="false" circRot="0" mainComp="false" id="Led-19" boardRot="-1000000" labelrot="0" boardPos="-1e+06,-1e+06" MaxCurrent="0.029999999999999999" labelx="-16" valLabelx="0" itemtype="Led" labely="-24" Threshold="2.3999999999999999" circPos="0,0" valLabRot="0" Resistance="0.59999999999999998" hflip="1" x="-516"/>
 
-Unique  Id: Connector-20: 
-Circuit Id: Connector-20
-<item x="-412" labelrot="0" enodeid="enode-20" valLabRot="0" valLabelx="0" id="Connector-20" startpinid="Led-19-rPin" hflip="1" rotation="0" boardRot="-1000000" Show_id="false" y="-344" boardPos="-1e+06,-1e+06" circPos="0,0" itemtype="Connector" mainComp="false" labelx="-16" objectName="Connector-20" valLabely="0" circRot="0" labely="-24" vflip="1" pointList="-412,-344,-400,-344,-400,-320" endpinid="Ground-4-Gnd"/>
+Unique  Id: Resistor-52: 
+Circuit Id: Resistor-14
+<item Show_id="false" valLabely="-151" rotation="90" y="-264" vflip="1" objectName="Resistor-52" circRot="0" mainComp="false" Show_res="true" id="Resistor-14" boardRot="-1000000" labelrot="0" boardPos="-1e+06,-1e+06" labelx="-12" valLabelx="-21" itemtype="Resistor" labely="-20" circPos="0,0" valLabRot="0" Resistance="147" hflip="1" x="-516" Unit=" Ω"/>
 
-Unique  Id: Connector-21: 
-Circuit Id: Connector-21
-<item x="-444" labelrot="0" enodeid="enode-21" valLabRot="0" valLabelx="0" id="Connector-21" startpinid="Led-19-lPin" hflip="1" rotation="0" boardRot="-1000000" Show_id="false" y="-344" boardPos="-1e+06,-1e+06" circPos="0,0" itemtype="Connector" mainComp="false" labelx="-16" objectName="Connector-21" valLabely="0" circRot="0" labely="-24" vflip="1" pointList="-444,-344,-464,-344" endpinid="Resistor-14-rPin"/>
+Unique  Id: Led-57: 
+Circuit Id: Led-19
+<item Show_id="false" valLabely="0" rotation="90" y="-224" vflip="1" objectName="Led-57" Color="0" Grounded="false" circRot="0" mainComp="false" id="Led-19" boardRot="-1000000" labelrot="0" boardPos="-1e+06,-1e+06" MaxCurrent="0.029999999999999999" labelx="-16" valLabelx="0" itemtype="Led" labely="-24" Threshold="2.3999999999999999" circPos="0,0" valLabRot="0" Resistance="0.59999999999999998" hflip="1" x="-492"/>
+
+Unique  Id: Resistor-58: 
+Circuit Id: Resistor-14
+<item Show_id="false" valLabely="-130" rotation="90" y="-264" vflip="1" objectName="Resistor-58" circRot="0" mainComp="false" Show_res="true" id="Resistor-14" boardRot="-1000000" labelrot="0" boardPos="-1e+06,-1e+06" labelx="-12" valLabelx="-20" itemtype="Resistor" labely="-20" circPos="0,0" valLabRot="0" Resistance="147" hflip="1" x="-492" Unit=" Ω"/>
+
+Unique  Id: Led-61: 
+Circuit Id: Led-19
+<item Show_id="false" valLabely="0" rotation="90" y="-224" vflip="1" objectName="Led-61" Color="0" Grounded="false" circRot="0" mainComp="false" id="Led-19" boardRot="-1000000" labelrot="0" boardPos="-1e+06,-1e+06" MaxCurrent="0.029999999999999999" labelx="-16" valLabelx="0" itemtype="Led" labely="-24" Threshold="2.3999999999999999" circPos="0,0" valLabRot="0" Resistance="0.59999999999999998" hflip="1" x="-468"/>
+
+Unique  Id: Resistor-62: 
+Circuit Id: Resistor-14
+<item Show_id="false" valLabely="-114" rotation="90" y="-264" vflip="1" objectName="Resistor-62" circRot="0" mainComp="false" Show_res="true" id="Resistor-14" boardRot="-1000000" labelrot="0" boardPos="-1e+06,-1e+06" labelx="-12" valLabelx="-22" itemtype="Resistor" labely="-20" circPos="0,0" valLabRot="0" Resistance="147" hflip="1" x="-468" Unit=" Ω"/>
+
+Unique  Id: Led-65: 
+Circuit Id: Led-19
+<item Show_id="false" valLabely="0" rotation="90" y="-224" vflip="1" objectName="Led-65" Color="0" Grounded="false" circRot="0" mainComp="false" id="Led-19" boardRot="-1000000" labelrot="0" boardPos="-1e+06,-1e+06" MaxCurrent="0.029999999999999999" labelx="-16" valLabelx="0" itemtype="Led" labely="-24" Threshold="2.3999999999999999" circPos="0,0" valLabRot="0" Resistance="0.59999999999999998" hflip="1" x="-444"/>
+
+Unique  Id: Resistor-66: 
+Circuit Id: Resistor-14
+<item Show_id="false" valLabely="-63" rotation="90" y="-264" vflip="1" objectName="Resistor-66" circRot="0" mainComp="false" Show_res="true" id="Resistor-14" boardRot="-1000000" labelrot="0" boardPos="-1e+06,-1e+06" labelx="-12" valLabelx="-22" itemtype="Resistor" labely="-20" circPos="0,0" valLabRot="0" Resistance="147" hflip="1" x="-444" Unit=" Ω"/>
+
+Unique  Id: Connector-47: 
+Circuit Id: Connector-47
+<item Show_id="false" valLabely="0" rotation="0" y="-240" vflip="1" pointList="-540,-240,-540,-248" enodeid="Circ_eNode-86" objectName="Connector-47" startpinid="Led-23-lPin" circRot="0" mainComp="false" id="Connector-47" boardRot="-1000000" labelrot="0" boardPos="-1e+06,-1e+06" labelx="-16" valLabelx="0" itemtype="Connector" endpinid="Resistor-25-rPin" labely="-24" circPos="0,0" valLabRot="0" hflip="1" x="-540"/>
+
+Unique  Id: Connector-53: 
+Circuit Id: Connector-47
+<item Show_id="false" valLabely="0" rotation="0" y="-240" vflip="1" pointList="-516,-240,-516,-248" enodeid="Circ_eNode-87" objectName="Connector-53" startpinid="Led-51-lPin" circRot="0" mainComp="false" id="Connector-47" boardRot="-1000000" labelrot="0" boardPos="-1e+06,-1e+06" labelx="-16" valLabelx="0" itemtype="Connector" endpinid="Resistor-52-rPin" labely="-24" circPos="0,0" valLabRot="0" hflip="1" x="-516"/>
+
+Unique  Id: Connector-59: 
+Circuit Id: Connector-47
+<item Show_id="false" valLabely="0" rotation="0" y="-240" vflip="1" pointList="-492,-240,-492,-248" enodeid="Circ_eNode-88" objectName="Connector-59" startpinid="Led-57-lPin" circRot="0" mainComp="false" id="Connector-47" boardRot="-1000000" labelrot="0" boardPos="-1e+06,-1e+06" labelx="-16" valLabelx="0" itemtype="Connector" endpinid="Resistor-58-rPin" labely="-24" circPos="0,0" valLabRot="0" hflip="1" x="-492"/>
+
+Unique  Id: Connector-63: 
+Circuit Id: Connector-47
+<item Show_id="false" valLabely="0" rotation="0" y="-240" vflip="1" pointList="-468,-240,-468,-248" enodeid="Circ_eNode-89" objectName="Connector-63" startpinid="Led-61-lPin" circRot="0" mainComp="false" id="Connector-47" boardRot="-1000000" labelrot="0" boardPos="-1e+06,-1e+06" labelx="-16" valLabelx="0" itemtype="Connector" endpinid="Resistor-62-rPin" labely="-24" circPos="0,0" valLabRot="0" hflip="1" x="-468"/>
+
+Unique  Id: Connector-67: 
+Circuit Id: Connector-47
+<item Show_id="false" valLabely="0" rotation="0" y="-240" vflip="1" pointList="-444,-240,-444,-248" enodeid="Circ_eNode-90" objectName="Connector-67" startpinid="Led-65-lPin" circRot="0" mainComp="false" id="Connector-47" boardRot="-1000000" labelrot="0" boardPos="-1e+06,-1e+06" labelx="-16" valLabelx="0" itemtype="Connector" endpinid="Resistor-66-rPin" labely="-24" circPos="0,0" valLabRot="0" hflip="1" x="-444"/>
+
+Unique  Id: Connector-77: 
+Circuit Id: Connector-77
+<item Show_id="false" valLabely="0" rotation="0" y="-280" vflip="1" pointList="-492,-280,-492,-288,-504,-288,-504,-312" enodeid="Circ_eNode-91" objectName="Connector-77" startpinid="Resistor-58-lPin" circRot="0" mainComp="false" id="Connector-77" boardRot="-1000000" labelrot="0" boardPos="-1e+06,-1e+06" labelx="-16" valLabelx="0" itemtype="Connector" endpinid="atmega328-1-PC2" labely="-24" circPos="0,0" valLabRot="0" hflip="1" x="-492"/>
+
+Unique  Id: Connector-78: 
+Circuit Id: Connector-78
+<item Show_id="false" valLabely="0" rotation="0" y="-280" vflip="1" pointList="-468,-280,-468,-292,-496,-292,-496,-312" enodeid="Circ_eNode-92" objectName="Connector-78" startpinid="Resistor-62-lPin" circRot="0" mainComp="false" id="Connector-78" boardRot="-1000000" labelrot="0" boardPos="-1e+06,-1e+06" labelx="-16" valLabelx="0" itemtype="Connector" endpinid="atmega328-1-PC3" labely="-24" circPos="0,0" valLabRot="0" hflip="1" x="-468"/>
+
+Unique  Id: Connector-81: 
+Circuit Id: Connector-81
+<item Show_id="false" valLabely="0" rotation="0" y="-312" vflip="1" pointList="-512,-312,-512,-280,-516,-280" enodeid="Circ_eNode-94" objectName="Connector-81" startpinid="atmega328-1-PC1" circRot="0" mainComp="false" id="Connector-81" boardRot="-1000000" labelrot="0" boardPos="-1e+06,-1e+06" labelx="-16" valLabelx="0" itemtype="Connector" endpinid="Resistor-52-lPin" labely="-24" circPos="0,0" valLabRot="0" hflip="1" x="-512"/>
+
+Unique  Id: Connector-82: 
+Circuit Id: Connector-82
+<item Show_id="false" valLabely="0" rotation="0" y="-312" vflip="1" pointList="-520,-312,-520,-288,-540,-288,-540,-280" enodeid="Circ_eNode-95" objectName="Connector-82" startpinid="atmega328-1-PC0" circRot="0" mainComp="false" id="Connector-82" boardRot="-1000000" labelrot="0" boardPos="-1e+06,-1e+06" labelx="-16" valLabelx="0" itemtype="Connector" endpinid="Resistor-25-lPin" labely="-24" circPos="0,0" valLabRot="0" hflip="1" x="-520"/>
+
+Unique  Id: Connector-83: 
+Circuit Id: Connector-83
+<item Show_id="false" valLabely="0" rotation="0" y="-208" vflip="1" pointList="-540,-208,-540,-208" enodeid="enode-111" objectName="Connector-83" startpinid="Led-23-rPin" circRot="1.6910995920583075e-306" mainComp="false" id="Connector-83" boardRot="-1000000" labelrot="0" boardPos="-1e+06,-1e+06" labelx="-16" valLabelx="0" itemtype="Connector" endpinid="Node-109-0" labely="-24" circPos="0,0" valLabRot="0" hflip="1" x="-540"/>
+
+Unique  Id: Connector-97: 
+Circuit Id: Connector-97
+<item Show_id="false" valLabely="0" rotation="0" y="-208" vflip="1" pointList="-492,-208,-492,-192" enodeid="enode-97" objectName="Connector-97" startpinid="Led-57-rPin" circRot="0" mainComp="false" id="Connector-97" boardRot="-1000000" labelrot="0" boardPos="-1e+06,-1e+06" labelx="-16" valLabelx="0" itemtype="Connector" endpinid="Ground-24-Gnd" labely="-24" circPos="0,0" valLabRot="0" hflip="1" x="-492"/>
+
+Unique  Id: Connector-79: 
+Circuit Id: Connector-79
+<item Show_id="false" valLabely="0" rotation="0" y="-280" vflip="1" pointList="-444,-280,-444,-304,-476,-304,-476,-300,-488,-300,-488,-312" enodeid="enode-79" objectName="Connector-79" startpinid="Resistor-66-lPin" circRot="0" mainComp="false" id="Connector-79" boardRot="-1000000" labelrot="0" boardPos="-1e+06,-1e+06" labelx="-16" valLabelx="0" itemtype="Connector" endpinid="atmega328-1-PC4" labely="-24" circPos="0,0" valLabRot="0" hflip="1" x="-444"/>
+
+Unique  Id: Connector-110: 
+Circuit Id: Connector-110
+<item Show_id="false" valLabely="0" rotation="0" y="-208" vflip="1" pointList="-540,-208,-444,-208" enodeid="enode-111" objectName="Connector-110" startpinid="Node-109-2" circRot="0" mainComp="false" id="Connector-110" boardRot="-1000000" labelrot="0" boardPos="-1e+06,-1e+06" labelx="-16" valLabelx="0" itemtype="Connector" endpinid="Led-65-rPin" labely="-24" circPos="0,0" valLabRot="0" hflip="1" x="-540"/>
+
+Unique  Id: Connector-111: 
+Circuit Id: Connector-111
+<item Show_id="false" valLabely="0" rotation="0" y="-208" vflip="1" pointList="-540,-208,-568,-208,-568,-256" enodeid="enode-111" objectName="Connector-111" startpinid="Node-109-1" circRot="0" mainComp="false" id="Connector-111" boardRot="-1000000" labelrot="0" boardPos="-1e+06,-1e+06" labelx="-16" valLabelx="0" itemtype="Connector" endpinid="Push-98-switch0pinN" labely="-24" circPos="0,0" valLabRot="0" hflip="1" x="-540"/>
+
+Unique  Id: Connector-112: 
+Circuit Id: Connector-112
+<item Show_id="false" valLabely="0" rotation="0" y="-256" vflip="1" pointList="-600,-256,-600,-368,-576,-368,-576,-360" enodeid="enode-112" objectName="Connector-112" startpinid="Push-98-pinP0" circRot="0" mainComp="false" id="Connector-112" boardRot="-1000000" labelrot="0" boardPos="-1e+06,-1e+06" labelx="-16" valLabelx="0" itemtype="Connector" endpinid="atmega328-1-PD7" labely="-24" circPos="0,0" valLabRot="0" hflip="1" x="-600"/>
  
 </circuit>
