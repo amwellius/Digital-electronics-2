@@ -13,11 +13,11 @@ Link to your `Digital-electronics-2` GitHub repository:
 | **Data type** | **Number of bits** | **Range** | **Description** |
 | :-: | :-: | :-: | :-- | 
 | `uint8_t`  | 8 | 0, 1, ..., 255 | Unsigned 8-bit integer |
-| `int8_t`   |  |  |  |
-| `uint16_t` |  |  |  |
-| `int16_t`  |  |  |  |
+| `int8_t`   | 8 | -128 - 127 | 1 byt signed |
+| `uint16_t` | 16 | 0 - 65535 | 2 byt unsigned |
+| `int16_t`  | 16 | -32768 - 32767 | 2 byt signed |
 | `float`    |  | -3.4e+38, ..., 3.4e+38 | Single-precision floating-point |
-| `void`     |  |  |  |
+| `void`     | 0 |0  | empty |
 
 
 ### GPIO library
