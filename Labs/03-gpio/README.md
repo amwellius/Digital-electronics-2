@@ -16,7 +16,7 @@ Link to your `Digital-electronics-2` GitHub repository:
 | `int8_t`   | 8 | -128 - 127 | 1 byt signed |
 | `uint16_t` | 16 | 0 - 65535 | 2 byt unsigned |
 | `int16_t`  | 16 | -32768 - 32767 | 2 byt signed |
-| `float`    |  | -3.4e+38, ..., 3.4e+38 | Single-precision floating-point |
+| `float`    | 32 | -3.4e+38, ..., 3.4e+38 | Single-precision floating-point |
 | `void`     | 0 |0  | empty |
 
 
