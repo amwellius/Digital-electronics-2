@@ -49,11 +49,12 @@ int main(void)
     while (1)
     {
         // Pause several milliseconds
-        if(GPIO_read(&PIND, BUTTON))
+        if(GPIO_read(&PIND, BUTTON) == 0)
         {
             _delay_ms(BLINK_DELAY);
-            GPIO_toggle(&DDRB, LED_RED);
-            GPIO_toggle(&DDRC, LED_GREEN);
+            GPIO_toggle(&PORTB, LED_GREEN);
+            GPIO_toggle(&PORTC, LED_RED);
+            
         }
 
     }
@@ -61,3 +62,25 @@ int main(void)
     // Will never reach this
     return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

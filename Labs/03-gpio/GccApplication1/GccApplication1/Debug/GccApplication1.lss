@@ -204,13 +204,13 @@ int main(void)
     while (1)
     {
         // Pause several milliseconds
-        if(GPIO_read(&PIND, BUTTON))
+        if(GPIO_read(&PIND, BUTTON) == 0)
  132:	67 e0       	ldi	r22, 0x07	; 7
  134:	89 e2       	ldi	r24, 0x29	; 41
  136:	90 e0       	ldi	r25, 0x00	; 0
  138:	0e 94 76 00 	call	0xec	; 0xec <GPIO_read>
- 13c:	88 23       	and	r24, r24
- 13e:	c9 f3       	breq	.-14     	; 0x132 <main+0x32>
+ 13c:	81 11       	cpse	r24, r1
+ 13e:	f9 cf       	rjmp	.-14     	; 0x132 <main+0x32>
 	#else
 		//round up by default
 		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
@@ -228,14 +228,14 @@ int main(void)
  150:	00 00       	nop
         {
             _delay_ms(BLINK_DELAY);
-            GPIO_toggle(&DDRB, LED_RED);
- 152:	60 e0       	ldi	r22, 0x00	; 0
- 154:	84 e2       	ldi	r24, 0x24	; 36
+            GPIO_toggle(&PORTB, LED_GREEN);
+ 152:	65 e0       	ldi	r22, 0x05	; 5
+ 154:	85 e2       	ldi	r24, 0x25	; 37
  156:	90 e0       	ldi	r25, 0x00	; 0
  158:	0e 94 6a 00 	call	0xd4	; 0xd4 <GPIO_toggle>
-            GPIO_toggle(&DDRC, LED_GREEN);
- 15c:	65 e0       	ldi	r22, 0x05	; 5
- 15e:	87 e2       	ldi	r24, 0x27	; 39
+            GPIO_toggle(&PORTC, LED_RED);
+ 15c:	60 e0       	ldi	r22, 0x00	; 0
+ 15e:	88 e2       	ldi	r24, 0x28	; 40
  160:	90 e0       	ldi	r25, 0x00	; 0
  162:	0e 94 6a 00 	call	0xd4	; 0xd4 <GPIO_toggle>
  166:	e5 cf       	rjmp	.-54     	; 0x132 <main+0x32>
