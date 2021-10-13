@@ -69,10 +69,8 @@ int main(void)
 ISR(TIMER1_OVF_vect)        //podla tohoto sa vykona to prerusenie, teda ze kedy sa ma vykonat 
 {
     static uint8_t i = 0;
-    static uint8_t q = 0;
-    
-    
-    
+    static uint8_t q = 0; 
+        
     switch(i){
         case(0):
             GPIO_write_high(&PORTB, LED_D1);
@@ -105,18 +103,8 @@ ISR(TIMER1_OVF_vect)        //podla tohoto sa vykona to prerusenie, teda ze kedy
             q = 1;
             i--;
             break;
-        default:;
-            
-         
+        default:;                 
             
     }
-
-
-
-     
-    //GPIO_toggle(&PORTB, LED_D1);
- 
-
-
 }
 
