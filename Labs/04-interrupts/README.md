@@ -17,11 +17,15 @@ Link to your `Digital-electronics-2` GitHub repository:
 | Timer/Counter1 | 16 | 4096u | 32.768m | 131.072m | 262.144m | 524.288m | 1048.576m | 4194.304m |
 | Timer/Counter2 | 8  | 16u | 128u | 512u | 1024u | 2048u | 4096u | 16.384m |
 
+<br/>
+
 | **Module** | **Operation** | **I/O register(s)** | **Bit(s)** |
 | :-: | :-- | :-: | :-- |
 | Timer/Counter0 | Prescaler<br><br>8-bit data value<br>Overflow interrupt enable | TCCR0B<br><br>TCNT0<br>TIMSK0 | CS02 CS01 CS00<br>(000: stopped, 001: 1, 010: 8, 011: 64, 100: 256, 101: 1024)<br>TCNT0[7:0]<br>TOIE0 (timer enable; 1: enable, 0: disable) |
 | Timer/Counter1 | Prescaler<br><br>16-bit data value<br>Overflow interrupt enable | TCCR1B<br><br>TCNT1H, TCNT1L<br>TIMSK1 | CS12, CS11, CS10<br>(000: stopped, 001: 1, 010: 8, 011: 64, 100: 256, 101: 1024)<br>TCNT1[15:0]<br>TOIE1 (1: enable, 0: disable) |
 | Timer/Counter2 | Prescaler<br><br>8-bit data value<br>Overflow interrupt enable | TCCR2B<br><br>TCNT2<br>TIMSK2 | CS22 CS21 CS20<br>(000: stopped, 001: 1, 010: 8, 011: 64, 100: 256, 101: 1024)<br>TCNT2[7:0]<br>TOIE2 (timer enable; 1: enable, 0: disable) |
+
+<br/>
 
    ![your figure](images/1_0.PNG)
 
@@ -38,7 +42,7 @@ Link to your `Digital-electronics-2` GitHub repository:
 ```c
 * @name  Definitions for 16-bit Timer/Counter1
  * @note  t_OVF = 1/F_CPU * prescaler * 2^n where n = 16, F_CPU = 16 MHz
- */
+
 /** @brief Stop timer, prescaler 000 --> STOP */
 #define TIM1_stop()           TCCR1B &= ~((1<<CS12) | (1<<CS11) | (1<<CS10));                   // &= znamena x=x&y
 /** @brief Set overflow 4ms, prescaler 001 --> 1 */
@@ -108,9 +112,12 @@ Link to your `Digital-electronics-2` GitHub repository:
 ### Knight Rider
 
 1. Scheme of Knight Rider application with four LEDs and a push button, connected according to Multi-function shield. Connect AVR device, LEDs, resistors, push button, and supply voltage. The image can be drawn on a computer or by hand. Always name all components and their values!
+
+<br/>
+
    ![](images/4_0.PNG)
    
-3. ISR for Knight Rider 
+2. ISR for Knight Rider 
 ```c
 ISR(TIMER1_OVF_vect)        //co vykonava prerusenie 
 {
