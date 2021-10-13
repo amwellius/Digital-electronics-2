@@ -18,6 +18,11 @@ Link to your `Digital-electronics-2` GitHub repository:
 | Timer/Counter2 | 8  |     |      |    | |    | | |
 
 
+
+   ![](images/1_0.PNG)
+
+
+
 ### Timer library
 
 1. In your words, describe the difference between common C function and interrupt service routine.
