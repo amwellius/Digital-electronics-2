@@ -13,8 +13,8 @@ Link to your `Digital-electronics-2` GitHub repository:
 
 | **Module** | **Number of bits** | **1** | **8** | **32** | **64** | **128** | **256** | **1024** |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| Timer/Counter0 | 8  | 16u | 128u | 512u | 1024u | 2048u | 4096u | 16.384m |
-| Timer/Counter1 | 16 | 4096u | 32.768m | 131.072m | 262.144m | 524.288m | 1048.576m | 4194.304m |
+| Timer/Counter0 | 8  | 16u | 128u | --- | 1024u | --- | 4096u | 16.384m |
+| Timer/Counter1 | 16 | 4096u | 32.768m | --- | 262.144m | --- | 1048.576m | 4194.304m |
 | Timer/Counter2 | 8  | 16u | 128u | 512u | 1024u | 2048u | 4096u | 16.384m |
 
 <br/>
