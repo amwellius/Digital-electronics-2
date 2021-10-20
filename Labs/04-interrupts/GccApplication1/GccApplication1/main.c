@@ -69,42 +69,42 @@ int main(void)
 ISR(TIMER1_OVF_vect)        //podla tohoto sa vykona to prerusenie, teda ze kedy sa ma vykonat 
 {
     static uint8_t i = 0;
-    static uint8_t q = 0; 
-        
+    static uint8_t q = 0;
+    
     switch(i){
         case(0):
-            GPIO_write_high(&PORTB, LED_D1);
-            GPIO_write_low(&PORTB, LED_D4);
-            GPIO_write_low(&PORTB, LED_D3);
-            GPIO_write_low(&PORTB, LED_D2);            
-            
-            q = 0;
-            i++;
-            break;
+        GPIO_write_high(&PORTB, LED_D1);
+        GPIO_write_low(&PORTB, LED_D4);
+        GPIO_write_low(&PORTB, LED_D3);
+        GPIO_write_low(&PORTB, LED_D2);
+        
+        q = 0;
+        i++;
+        break;
         case(1):
-            GPIO_write_low(&PORTB, LED_D1);
-            GPIO_write_high(&PORTB, LED_D2);
-            GPIO_write_low(&PORTB, LED_D3);
-            if(q == 0)
-                i++;
-            else i--;
-            break;
+        GPIO_write_low(&PORTB, LED_D1);
+        GPIO_write_high(&PORTB, LED_D2);
+        GPIO_write_low(&PORTB, LED_D3);
+        if(q == 0)
+        i++;
+        else i--;
+        break;
         case(2):
-            GPIO_write_low(&PORTB, LED_D2);
-            GPIO_write_high(&PORTB, LED_D3);
-            GPIO_write_low(&PORTB, LED_D4);
-            if(q == 0)
-                i++;
-            else i--;
-            break;             
-         case(3):
-            GPIO_write_low(&PORTB, LED_D3);
-            GPIO_write_high(&PORTB, LED_D4);
-            q = 1;
-            i--;
-            break;
-        default:;                 
-            
+        GPIO_write_low(&PORTB, LED_D2);
+        GPIO_write_high(&PORTB, LED_D3);
+        GPIO_write_low(&PORTB, LED_D4);
+        if(q == 0)
+        i++;
+        else i--;
+        break;
+        case(3):
+        GPIO_write_low(&PORTB, LED_D3);
+        GPIO_write_high(&PORTB, LED_D4);
+        q = 1;
+        i--;
+        break;
+        default:;
+        
     }
 }
 

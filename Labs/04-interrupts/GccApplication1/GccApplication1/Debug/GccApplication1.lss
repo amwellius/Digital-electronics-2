@@ -246,8 +246,6 @@ ISR(TIMER1_OVF_vect)        //podla tohoto sa vykona to prerusenie, teda ze kedy
     static uint8_t i = 0;
     static uint8_t q = 0;
     
-    
-    
     switch(i){
  16a:	80 91 01 01 	lds	r24, 0x0101	; 0x800101 <i.1631>
  16e:	81 30       	cpi	r24, 0x01	; 1
@@ -261,120 +259,119 @@ ISR(TIMER1_OVF_vect)        //podla tohoto sa vykona to prerusenie, teda ze kedy
  17e:	5b c0       	rjmp	.+182    	; 0x236 <__vector_13+0xee>
  180:	6c c0       	rjmp	.+216    	; 0x25a <__vector_13+0x112>
         case(0):
-            GPIO_write_high(&PORTB, LED_D1);
+        GPIO_write_high(&PORTB, LED_D1);
  182:	65 e0       	ldi	r22, 0x05	; 5
  184:	85 e2       	ldi	r24, 0x25	; 37
  186:	90 e0       	ldi	r25, 0x00	; 0
  188:	0e 94 61 00 	call	0xc2	; 0xc2 <GPIO_write_high>
-            GPIO_write_low(&PORTB, LED_D4);
+        GPIO_write_low(&PORTB, LED_D4);
  18c:	62 e0       	ldi	r22, 0x02	; 2
  18e:	85 e2       	ldi	r24, 0x25	; 37
  190:	90 e0       	ldi	r25, 0x00	; 0
  192:	0e 94 54 00 	call	0xa8	; 0xa8 <GPIO_write_low>
-            GPIO_write_low(&PORTB, LED_D3);
+        GPIO_write_low(&PORTB, LED_D3);
  196:	63 e0       	ldi	r22, 0x03	; 3
  198:	85 e2       	ldi	r24, 0x25	; 37
  19a:	90 e0       	ldi	r25, 0x00	; 0
  19c:	0e 94 54 00 	call	0xa8	; 0xa8 <GPIO_write_low>
-            GPIO_write_low(&PORTB, LED_D2);            
+        GPIO_write_low(&PORTB, LED_D2);
  1a0:	64 e0       	ldi	r22, 0x04	; 4
  1a2:	85 e2       	ldi	r24, 0x25	; 37
  1a4:	90 e0       	ldi	r25, 0x00	; 0
  1a6:	0e 94 54 00 	call	0xa8	; 0xa8 <GPIO_write_low>
-            
-            q = 0;
+        
+        q = 0;
  1aa:	10 92 00 01 	sts	0x0100, r1	; 0x800100 <__DATA_REGION_ORIGIN__>
-            i++;
+        i++;
  1ae:	80 91 01 01 	lds	r24, 0x0101	; 0x800101 <i.1631>
  1b2:	8f 5f       	subi	r24, 0xFF	; 255
  1b4:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <i.1631>
-            break;
+        break;
  1b8:	50 c0       	rjmp	.+160    	; 0x25a <__vector_13+0x112>
         case(1):
-            GPIO_write_low(&PORTB, LED_D1);
+        GPIO_write_low(&PORTB, LED_D1);
  1ba:	65 e0       	ldi	r22, 0x05	; 5
  1bc:	85 e2       	ldi	r24, 0x25	; 37
  1be:	90 e0       	ldi	r25, 0x00	; 0
  1c0:	0e 94 54 00 	call	0xa8	; 0xa8 <GPIO_write_low>
-            GPIO_write_high(&PORTB, LED_D2);
+        GPIO_write_high(&PORTB, LED_D2);
  1c4:	64 e0       	ldi	r22, 0x04	; 4
  1c6:	85 e2       	ldi	r24, 0x25	; 37
  1c8:	90 e0       	ldi	r25, 0x00	; 0
  1ca:	0e 94 61 00 	call	0xc2	; 0xc2 <GPIO_write_high>
-            GPIO_write_low(&PORTB, LED_D3);
+        GPIO_write_low(&PORTB, LED_D3);
  1ce:	63 e0       	ldi	r22, 0x03	; 3
  1d0:	85 e2       	ldi	r24, 0x25	; 37
  1d2:	90 e0       	ldi	r25, 0x00	; 0
  1d4:	0e 94 54 00 	call	0xa8	; 0xa8 <GPIO_write_low>
-            if(q == 0)
+        if(q == 0)
  1d8:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
  1dc:	81 11       	cpse	r24, r1
  1de:	06 c0       	rjmp	.+12     	; 0x1ec <__vector_13+0xa4>
-                i++;
+        i++;
  1e0:	80 91 01 01 	lds	r24, 0x0101	; 0x800101 <i.1631>
  1e4:	8f 5f       	subi	r24, 0xFF	; 255
  1e6:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <i.1631>
  1ea:	37 c0       	rjmp	.+110    	; 0x25a <__vector_13+0x112>
-            else i--;
+        else i--;
  1ec:	80 91 01 01 	lds	r24, 0x0101	; 0x800101 <i.1631>
  1f0:	81 50       	subi	r24, 0x01	; 1
  1f2:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <i.1631>
  1f6:	31 c0       	rjmp	.+98     	; 0x25a <__vector_13+0x112>
-            break;
+        break;
         case(2):
-            GPIO_write_low(&PORTB, LED_D2);
+        GPIO_write_low(&PORTB, LED_D2);
  1f8:	64 e0       	ldi	r22, 0x04	; 4
  1fa:	85 e2       	ldi	r24, 0x25	; 37
  1fc:	90 e0       	ldi	r25, 0x00	; 0
  1fe:	0e 94 54 00 	call	0xa8	; 0xa8 <GPIO_write_low>
-            GPIO_write_high(&PORTB, LED_D3);
+        GPIO_write_high(&PORTB, LED_D3);
  202:	63 e0       	ldi	r22, 0x03	; 3
  204:	85 e2       	ldi	r24, 0x25	; 37
  206:	90 e0       	ldi	r25, 0x00	; 0
  208:	0e 94 61 00 	call	0xc2	; 0xc2 <GPIO_write_high>
-            GPIO_write_low(&PORTB, LED_D4);
+        GPIO_write_low(&PORTB, LED_D4);
  20c:	62 e0       	ldi	r22, 0x02	; 2
  20e:	85 e2       	ldi	r24, 0x25	; 37
  210:	90 e0       	ldi	r25, 0x00	; 0
  212:	0e 94 54 00 	call	0xa8	; 0xa8 <GPIO_write_low>
-            if(q == 0)
+        if(q == 0)
  216:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
  21a:	81 11       	cpse	r24, r1
  21c:	06 c0       	rjmp	.+12     	; 0x22a <__vector_13+0xe2>
-                i++;
+        i++;
  21e:	80 91 01 01 	lds	r24, 0x0101	; 0x800101 <i.1631>
  222:	8f 5f       	subi	r24, 0xFF	; 255
  224:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <i.1631>
  228:	18 c0       	rjmp	.+48     	; 0x25a <__vector_13+0x112>
-            else i--;
+        else i--;
  22a:	80 91 01 01 	lds	r24, 0x0101	; 0x800101 <i.1631>
  22e:	81 50       	subi	r24, 0x01	; 1
  230:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <i.1631>
  234:	12 c0       	rjmp	.+36     	; 0x25a <__vector_13+0x112>
-            break;             
-         case(3):
-            GPIO_write_low(&PORTB, LED_D3);
+        break;
+        case(3):
+        GPIO_write_low(&PORTB, LED_D3);
  236:	63 e0       	ldi	r22, 0x03	; 3
  238:	85 e2       	ldi	r24, 0x25	; 37
  23a:	90 e0       	ldi	r25, 0x00	; 0
  23c:	0e 94 54 00 	call	0xa8	; 0xa8 <GPIO_write_low>
-            GPIO_write_high(&PORTB, LED_D4);
+        GPIO_write_high(&PORTB, LED_D4);
  240:	62 e0       	ldi	r22, 0x02	; 2
  242:	85 e2       	ldi	r24, 0x25	; 37
  244:	90 e0       	ldi	r25, 0x00	; 0
  246:	0e 94 61 00 	call	0xc2	; 0xc2 <GPIO_write_high>
-            q = 1;
+        q = 1;
  24a:	81 e0       	ldi	r24, 0x01	; 1
  24c:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__DATA_REGION_ORIGIN__>
-            i--;
+        i--;
  250:	80 91 01 01 	lds	r24, 0x0101	; 0x800101 <i.1631>
  254:	81 50       	subi	r24, 0x01	; 1
  256:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <i.1631>
-     
-    //GPIO_toggle(&PORTB, LED_D1);
- 
-
-
+        break;
+        default:;
+        
+    }
 }
  25a:	ff 91       	pop	r31
  25c:	ef 91       	pop	r30
