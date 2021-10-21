@@ -9,8 +9,8 @@ Link to your `Digital-electronics-2` GitHub repository:
 ### 7-segment library
 
 1. In your words, describe the difference between Common Cathode and Common Anode 7-segment display.
-   * CC SSD
-   * CA SSD
+   * CC SSD = Spoločná katóda/záporný pin. LED majú spojené záporné/mínusové piny, sú pripojené na zem. Jednotlivé LED sa ovládajú vysokou úrovňou.
+   * CA SSD = Spoločná anóda/kladný pin. Plusové piny sú spojené a sú na vysokej úrovni. LED sú zapínané nízkou úrovňou/priložením na zem.
 
 2. Code listing with syntax highlighting of two interrupt service routines (`TIMER1_OVF_vect`, `TIMER0_OVF_vect`) from counter application with at least two digits, ie. values from 00 to 59:
 
@@ -44,7 +44,7 @@ ISR(TIMER0_OVF_vect)
 
 3. Flowchart figure for function `SEG_clk_2us()` which generates one clock period on `SEG_CLK` pin with a duration of 2&nbsp;us. The image can be drawn on a computer or by hand. Use clear descriptions of the individual steps of the algorithms.
 
-   ![your figure](images/1_3.PNG)
+   ![your figure](images/1_3.png)
 
 
 ### Kitchen alarm
