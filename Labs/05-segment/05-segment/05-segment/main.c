@@ -88,18 +88,17 @@ ISR(TIMER1_OVF_vect)
 
 ISR(TIMER0_OVF_vect)
 {
-    // This line will only run the first time
-    static uint8_t tempPosition = 0;
-    
-    static int pow10[5] = { 1, 10, 100, 1000, 10000 };
-    
+    //This line will only run the first time
+    static uint8_t tempPosition = 0;      
+    static int pow10[5] = {1, 10, 100, 1000, 10000}; 
+           
     uint16_t tempValue;
     tempValue = (maxNumber % pow10[tempPosition+1]) / (pow10[tempPosition]);
     
-    // segment.c will get new value
+    //segment.c will get new value
     SEG_update_shift_regs(tempValue, tempPosition);
     
-    // Increment to go to next segment
+    //display shifting
     tempPosition++;
     if (tempPosition == 4) tempPosition = 0;
 } 
