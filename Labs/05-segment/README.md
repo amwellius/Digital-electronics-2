@@ -21,6 +21,7 @@ ISR(TIMER1_OVF_vect)
     maxNumber++;
     if (maxNumber == 60) maxNumber = 0;
 }
+```
 
 ```c
 ISR(TIMER0_OVF_vect)
