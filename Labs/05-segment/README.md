@@ -12,37 +12,38 @@ Link to your `Digital-electronics-2` GitHub repository:
    * CC SSD
    * CA SSD
 
-2. Code listing with syntax highlighting of two interrupt service routines (`TIMER0_OVF_vect`, `TIMER0_OVF_vect`) from counter application with at least two digits, ie. values from 00 to 59:
+2. Code listing with syntax highlighting of two interrupt service routines (`TIMER1_OVF_vect`, `TIMER0_OVF_vect`) from counter application with at least two digits, ie. values from 00 to 59:
 
 ```c
-/**********************************************************************
- * Function: Timer/Counter1 overflow interrupt
- * Purpose:  Increment counter value from 00 to 59.
- **********************************************************************/
 ISR(TIMER1_OVF_vect)
 {
-    // WRITE YOUR CODE HERE
-
+    //each set time will increase
+    maxNumber++;
+    if (maxNumber == 60) maxNumber = 0;
 }
-```
 
 ```c
-/**********************************************************************
- * Function: Timer/Counter0 overflow interrupt
- * Purpose:  Display tens and units of a counter at SSD.
- **********************************************************************/
 ISR(TIMER0_OVF_vect)
 {
-    static uint8_t pos = 0;
-
-    // WRITE YOUR CODE HERE
-
-}
+    //This line will only run the first time
+    static uint8_t tempPosition = 0;    
+    static int pow10[5] = { 1, 10, 100, 1000, 10000 };
+    
+    uint16_t tempValue;
+    tempValue = (maxNumber % pow10[tempPosition+1]) / (pow10[tempPosition]);
+    
+    //segment.c will get new value
+    SEG_update_shift_regs(tempValue, tempPosition);
+    
+    //display shifting
+    tempPosition++;
+    if (tempPosition == 4) tempPosition = 0;
+}  
 ```
 
 3. Flowchart figure for function `SEG_clk_2us()` which generates one clock period on `SEG_CLK` pin with a duration of 2&nbsp;us. The image can be drawn on a computer or by hand. Use clear descriptions of the individual steps of the algorithms.
 
-   ![your figure]()
+   ![your figure](images/1_3.PNG)
 
 
 ### Kitchen alarm
