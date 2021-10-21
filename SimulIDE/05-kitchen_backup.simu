@@ -1,16 +1,16 @@
 <circuit type="simulide_0.4" reactStep="50" animate="0" Simu_Step_nS="1000" Speed_sps="1000000" Speed_per="100" noLinAcc="5">
 
+Unique  Id: Node-205: 
+Circuit Id: Node-205
+<item objectName="Node-205" y="-484" Show_id="false" mainComp="false" valLabely="0" circRot="-9.2823573318613429e+158" valLabRot="0" itemtype="Node" boardPos="-1e+06,-1e+06" labelrot="0" x="-992" hflip="1" labely="-24" id="Node-205" rotation="0" vflip="1" boardRot="-1000000" valLabelx="0" circPos="0,0" labelx="-16"/>
+
+Unique  Id: Led-203: 
+Circuit Id: Led-203
+<item Color="0" objectName="Led-203" MaxCurrent="0.029999999999999999" y="-448" Show_id="false" mainComp="false" valLabely="0" circRot="5.8991483010474646e-312" valLabRot="0" itemtype="Led" boardPos="-1e+06,-1e+06" labelrot="0" x="-1020" hflip="1" Threshold="2.3999999999999999" Grounded="false" labely="-24" id="Led-203" rotation="0" vflip="1" boardRot="-1000000" valLabelx="0" circPos="0,0" labelx="-16" Resistance="0.59999999999999998"/>
+
 Unique  Id: Fixed Voltage-202: 
 Circuit Id: Fixed Voltage-202
 <item objectName="Fixed Voltage-202" y="-364" Voltage="5" Show_id="false" mainComp="false" Out="true" valLabely="8" circRot="4.0742319208667369e-312" valLabRot="0" itemtype="Fixed Voltage" Unit=" V" boardPos="-1e+06,-1e+06" labelrot="0" x="-1200" hflip="1" Show_Volt="true" labely="-24" id="Fixed Voltage-202" rotation="-270" vflip="1" boardRot="-1000000" valLabelx="-16" circPos="0,0" labelx="-64"/>
-
-Unique  Id: Node-198: 
-Circuit Id: Node-198
-<item objectName="Node-198" y="-484" Show_id="false" mainComp="false" valLabely="0" circRot="-5.4861292803319049e+303" valLabRot="0" itemtype="Node" boardPos="-1e+06,-1e+06" labelrot="0" x="-992" hflip="1" labely="-24" id="Node-198" rotation="0" vflip="1" boardRot="-1000000" valLabelx="0" circPos="0,0" labelx="-16"/>
-
-Unique  Id: Diode-196: 
-Circuit Id: Diode-196
-<item objectName="Diode-196" y="-448" Show_id="false" mainComp="false" Zener_Volt="0" valLabely="0" circRot="1.6912150298105456e-306" valLabRot="0" itemtype="Diode" boardPos="-1e+06,-1e+06" labelrot="0" x="-1016" hflip="1" Threshold="0.69999999999999996" labely="-24" id="Diode-196" rotation="0" vflip="1" boardRot="-1000000" valLabelx="0" circPos="0,0" labelx="-16"/>
 
 Unique  Id: Resistor-195: 
 Circuit Id: Resistor-195
@@ -184,10 +184,6 @@ Unique  Id: Connector-182:
 Circuit Id: Connector-182
 <item objectName="Connector-182" y="-392" Show_id="false" mainComp="false" enodeid="enode-182" valLabely="0" circRot="0" valLabRot="0" itemtype="Connector" boardPos="-1e+06,-1e+06" labelrot="0" endpinid="74HC595-69-Q7'" x="-972" hflip="1" startpinid="74HC595-69-Vcc" pointList="-972,-392,-972,-392" labely="-24" id="Connector-182" rotation="0" vflip="1" boardRot="-1000000" valLabelx="0" circPos="0,0" labelx="-16"/>
 
-Unique  Id: Connector-187: 
-Circuit Id: Connector-187
-<item objectName="Connector-187" y="-552" Show_id="false" mainComp="false" enodeid="enode-197" valLabely="0" circRot="0" valLabRot="0" itemtype="Connector" boardPos="-1e+06,-1e+06" labelrot="0" endpinid="Node-198-0" x="-1008" hflip="1" startpinid="Push-184-switch0pinN" pointList="-1008,-552,-992,-552,-992,-484" labely="-24" id="Connector-187" rotation="0" vflip="1" boardRot="-1000000" valLabelx="0" circPos="0,0" labelx="-16"/>
-
 Unique  Id: Connector-190: 
 Circuit Id: Connector-190
 <item objectName="Connector-190" y="-516" Show_id="false" mainComp="false" enodeid="enode-190" valLabely="0" circRot="0" valLabRot="0" itemtype="Connector" boardPos="-1e+06,-1e+06" labelrot="0" endpinid="Ground-189-Gnd" x="-1008" hflip="1" startpinid="Push-186-switch0pinN" pointList="-1008,-516,-960,-516,-960,-508" labely="-24" id="Connector-190" rotation="0" vflip="1" boardRot="-1000000" valLabelx="0" circPos="0,0" labelx="-16"/>
@@ -204,20 +200,24 @@ Unique  Id: Connector-193:
 Circuit Id: Connector-193
 <item objectName="Connector-193" y="-484" Show_id="false" mainComp="false" enodeid="enode-193" valLabely="0" circRot="0" valLabRot="0" itemtype="Connector" boardPos="-1e+06,-1e+06" labelrot="0" endpinid="atmega328-135-PC3" x="-1040" hflip="1" startpinid="Push-185-pinP0" pointList="-1040,-484,-1100,-484,-1100,-372,-1116,-372" labely="-24" id="Connector-193" rotation="0" vflip="1" boardRot="-1000000" valLabelx="0" circPos="0,0" labelx="-16"/>
 
-Unique  Id: Connector-197: 
-Circuit Id: Connector-197
-<item objectName="Connector-197" y="-448" Show_id="false" mainComp="false" enodeid="enode-197" valLabely="0" circRot="0" valLabRot="0" itemtype="Connector" boardPos="-1e+06,-1e+06" labelrot="0" endpinid="Node-198-1" x="-1000" hflip="1" startpinid="Diode-196-rPin" pointList="-1000,-448,-992,-448,-992,-484" labely="-24" id="Connector-197" rotation="0" vflip="1" boardRot="-1000000" valLabelx="0" circPos="0,0" labelx="-16"/>
-
-Unique  Id: Connector-199: 
-Circuit Id: Connector-199
-<item objectName="Connector-199" y="-484" Show_id="false" mainComp="false" enodeid="enode-197" valLabely="0" circRot="0" valLabRot="0" itemtype="Connector" boardPos="-1e+06,-1e+06" labelrot="0" endpinid="Push-185-switch0pinN" x="-992" hflip="1" startpinid="Node-198-2" pointList="-992,-484,-1008,-484" labely="-24" id="Connector-199" rotation="0" vflip="1" boardRot="-1000000" valLabelx="0" circPos="0,0" labelx="-16"/>
-
-Unique  Id: Connector-200: 
-Circuit Id: Connector-200
-<item objectName="Connector-200" y="-448" Show_id="false" mainComp="false" enodeid="enode-200" valLabely="0" circRot="0" valLabRot="0" itemtype="Connector" boardPos="-1e+06,-1e+06" labelrot="0" endpinid="Resistor-195-rPin" x="-1032" hflip="1" startpinid="Diode-196-lPin" pointList="-1032,-448,-1044,-448" labely="-24" id="Connector-200" rotation="0" vflip="1" boardRot="-1000000" valLabelx="0" circPos="0,0" labelx="-16"/>
-
 Unique  Id: Connector-201: 
 Circuit Id: Connector-201
 <item objectName="Connector-201" y="-448" Show_id="false" mainComp="false" enodeid="enode-201" valLabely="0" circRot="0" valLabRot="0" itemtype="Connector" boardPos="-1e+06,-1e+06" labelrot="0" endpinid="atmega328-135-PC2" x="-1076" hflip="1" startpinid="Resistor-195-lPin" pointList="-1076,-448,-1092,-448,-1092,-364,-1116,-364" labely="-24" id="Connector-201" rotation="0" vflip="1" boardRot="-1000000" valLabelx="0" circPos="0,0" labelx="-16"/>
+
+Unique  Id: Connector-187: 
+Circuit Id: Connector-187
+<item objectName="Connector-187" y="-552" Show_id="false" mainComp="false" enodeid="enode-204" valLabely="0" circRot="0" valLabRot="0" itemtype="Connector" boardPos="-1e+06,-1e+06" labelrot="0" endpinid="Node-205-0" x="-1008" hflip="1" startpinid="Push-184-switch0pinN" pointList="-1008,-552,-992,-552,-992,-484" labely="-24" id="Connector-187" rotation="0" vflip="1" boardRot="-1000000" valLabelx="0" circPos="0,0" labelx="-16"/>
+
+Unique  Id: Connector-204: 
+Circuit Id: Connector-204
+<item objectName="Connector-204" y="-448" Show_id="false" mainComp="false" enodeid="enode-204" valLabely="0" circRot="0" valLabRot="0" itemtype="Connector" boardPos="-1e+06,-1e+06" labelrot="0" endpinid="Node-205-1" x="-1004" hflip="1" startpinid="Led-203-rPin" pointList="-1004,-448,-992,-448,-992,-484" labely="-24" id="Connector-204" rotation="0" vflip="1" boardRot="-1000000" valLabelx="0" circPos="0,0" labelx="-16"/>
+
+Unique  Id: Connector-206: 
+Circuit Id: Connector-206
+<item objectName="Connector-206" y="-484" Show_id="false" mainComp="false" enodeid="enode-204" valLabely="0" circRot="0" valLabRot="0" itemtype="Connector" boardPos="-1e+06,-1e+06" labelrot="0" endpinid="Push-185-switch0pinN" x="-992" hflip="1" startpinid="Node-205-2" pointList="-992,-484,-1008,-484" labely="-24" id="Connector-206" rotation="0" vflip="1" boardRot="-1000000" valLabelx="0" circPos="0,0" labelx="-16"/>
+
+Unique  Id: Connector-207: 
+Circuit Id: Connector-207
+<item objectName="Connector-207" y="-448" Show_id="false" mainComp="false" enodeid="enode-207" valLabely="0" circRot="0" valLabRot="0" itemtype="Connector" boardPos="-1e+06,-1e+06" labelrot="0" endpinid="Resistor-195-rPin" x="-1036" hflip="1" startpinid="Led-203-lPin" pointList="-1036,-448,-1044,-448" labely="-24" id="Connector-207" rotation="0" vflip="1" boardRot="-1000000" valLabelx="0" circPos="0,0" labelx="-16"/>
  
 </circuit>

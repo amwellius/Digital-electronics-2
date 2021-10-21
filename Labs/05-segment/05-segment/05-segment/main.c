@@ -19,7 +19,7 @@
 #include <util/delay.h>
 
 
-uint16_t val = 0;
+uint16_t maxNumber = 0;
 /* Function definitions ----------------------------------------------*/
 /**********************************************************************
  * Function: Main function where the program execution begins
@@ -51,7 +51,10 @@ int main(void)
    */
     // Configure 16-bit Timer/Counter1 for Decimal counter
     // Set the overflow prescaler to 262 ms and enable interrupt
-    TIM1_overflow_33ms();
+    
+    //counting time
+    TIM1_overflow_1s();
+    //display time
     TIM0_overflow_128us();
     TIM1_overflow_interrupt_enable();
     TIM0_overflow_interrupt_enable();
@@ -79,23 +82,25 @@ int main(void)
 
 ISR(TIMER1_OVF_vect)
 {
-    val++;
-    if (val == 2951) val = 0;
+    maxNumber++;
+    if (maxNumber == 60) maxNumber = 0;
 }
 
 ISR(TIMER0_OVF_vect)
 {
-    static uint8_t pos = 0;  // This line will only run the first time
+    // This line will only run the first time
+    static uint8_t tempPosition = 0;
+    
     static int pow10[5] = { 1, 10, 100, 1000, 10000 };
     
-    // calculate digit from number and pos
-    uint16_t loc_val = (val % pow10[pos+1]) / (pow10[pos]);
+    uint16_t tempValue;
+    tempValue = (maxNumber % pow10[tempPosition+1]) / (pow10[tempPosition]);
     
-    // Update segment
-    SEG_update_shift_regs(loc_val, pos);
+    // segment.c will get new value
+    SEG_update_shift_regs(tempValue, tempPosition);
     
     // Increment to go to next segment
-    pos++;
-    if (pos == 4) pos = 0;
+    tempPosition++;
+    if (tempPosition == 4) tempPosition = 0;
 } 
  

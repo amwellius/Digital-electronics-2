@@ -85,19 +85,22 @@ void SEG_update_shift_regs(uint8_t segments, uint8_t position)
         // Test LSB of "segments" by & (faster) or % (slower) and...
         // ...output DATA value
         PORT_DATA = ((segments & 1) == 0) ? PORT_DATA & ~(1 << SEG_DATA) : PORT_DATA | (1 << SEG_DATA);
-
+        
        
         // Wait 1 us
         _delay_us(1);
         // Pull CLK high
-        PORT_CLK |= (1 << SEG_CLK);
+        GPIO_write_high(&PORT_CLK, SEG_CLK);
+        //PORT_CLK |= (1 << SEG_CLK);
         // Wait 1 us
         _delay_us(1);
         // Pull CLK low
-         PORT_CLK &= ~(1 << SEG_CLK);
-         
+        GPIO_write_low(&PORT_CLK, SEG_CLK);
+        //PORT_CLK &= ~(1 << SEG_CLK);
+        
         // Shift "segments"
         segments >>= 1;
+        
 
     }
 
@@ -108,23 +111,31 @@ void SEG_update_shift_regs(uint8_t segments, uint8_t position)
         // Test LSB of "position" by & (faster) or % (slower) and... 
         // ...output DATA value
         PORT_DATA = ((position & 1) == 0) ? PORT_DATA & ~(1 << SEG_DATA) : PORT_DATA | (1 << SEG_DATA);
-        // Shift "position"
-        position = position >> 1;
+        
+        
         // Wait 1 us
         _delay_us(1);
 
         // Pull CLK high
-        PORT_CLK |= (1 << SEG_CLK);
+        GPIO_write_high(&PORT_CLK, SEG_CLK);
+        //PORT_CLK |= (1 << SEG_CLK);
         // Wait 1 us
         _delay_us(1);
 
         // Pull CLK low
-        PORT_CLK &= ~(1 << SEG_CLK);
+        GPIO_write_low(&PORT_CLK, SEG_CLK);
+        //PORT_CLK &= ~(1 << SEG_CLK);
+        
+        // Shift "position"
+        position = position >> 1;
+        
+        
 
     }
 
     // Pull LATCH high
-    PORT_LATCH |= (1 << SEG_LATCH);
+    GPIO_write_high(&PORT_LATCH, SEG_LATCH);
+    //PORT_LATCH |= (1 << SEG_LATCH);
     // Wait 1 us
     _delay_us(1);
 
@@ -146,9 +157,11 @@ void SEG_clk_2us(void)
      // Wait 1 us
      _delay_us(1);
      // Pull CLK high
-     PORT_CLK |= (1 << SEG_CLK);
+     GPIO_write_high(&PORT_CLK,SEG_CLK);
+     //PORT_CLK |=(1<<SEG_CLK);
      // Wait 1 us
      _delay_us(1);
      // Pull CLK low
-     PORT_CLK &= ~(1 << SEG_CLK);
+     GPIO_write_low(&PORT_CLK,SEG_CLK);
+     //PORT_CLK &=~(1<<SEG_CLK);
 }
