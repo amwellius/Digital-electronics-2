@@ -1,0 +1,52 @@
+/* Configuration of SSD signals */
+    GPIO_config_output(&DDRD, SEG_LATCH);
+
+//tooglovanie
+	*reg_name = *reg_name ^ (1<<pin_num);
+
+// Pull CLK high
+        GPIO_write_high(&PORT_CLK, SEG_CLK);
+     // PORT_CLK |= (1 << SEG_CLK);
+        DDRB = DDRB | (1<<LED_GREEN); 
+
+// Pull CLK low
+        GPIO_write_low(&PORT_CLK, SEG_CLK);
+     // PORT_CLK &= ~(1 << SEG_CLK);
+        PORTB = PORTB & ~(1<<LED_GREEN);                // << je bit shift
+
+// Configure Push button at port D and enable internal PULL-UP resistor
+    GPIO_config_input_pullup(&DDRD, BUTTON);    
+
+//vsetko co najde ako LED_green nahradi ako PB5
+	#define LED_GREEN   PB5 // AVR pin where green LED is connected 
+
+// Set pin as output in Data Direction Register
+    // DDRB = DDRB or 0010 0000
+    DDRB = DDRB | (1<<LED_GREEN); 
+
+//ak je stlaceny Button, LEDka bude svietit// zevraj je to blbost tak nic teda
+	 if(bit_is_clear(PIND, PD7))
+        {
+            _delay_ms(BLINK_DELAY);
+            PORTC = PORTC ^ (1<<LED_RED);       //LED ON (toogle OFF)
+            PORTB = PORTB ^ (1<<LED_GREEN);     //LED ON (toogle OFF)
+        }
+
+// "" znamenaju ze sa to bude hladat vo folderi projektu
+	#include "gpio.h"           // GPIO library for AVR-GCC  
+
+
+
+		INTERUPTS
+
+// Configuration of 16-bit Timer/Counter1 for LED blinking
+    // Set the overflow prescaler to 262 ms and enable interrupt
+    TIM1_overflow_262ms();
+    TIM1_overflow_interrupt_enable();
+
+// Enables interrupts by setting the global interrupt mask
+    sei();
+    // cli();   //ziadne prerusenie nepojde/prerusenia nie je povolene
+    
+        
+
