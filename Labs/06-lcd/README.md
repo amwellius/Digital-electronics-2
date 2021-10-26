@@ -5,31 +5,47 @@ Link to your `Digital-electronics-2` GitHub repository:
 (https://github.com/amwellius/Digital-electronics-2)
 
 
-### LCD display module
+## LCD display module
 
-0. PREPARATION
+### PREPARATION
 
-	| **LCD signal(s)** | **AVR pin(s)** | **Description** |
-  	| :-: | :-: | :-- |
-  	| RS | PB0 | Register selection signal. Selection between Instruction register 	        (RS=0) and Data register (RS=1) |
-        | R/W |  |  |
-        | E |  |  |
-        | D[3:0] |  |  |
-        | D[7:4] |  |  |
+   | **LCD signal(s)** | **AVR pin(s)** | **Description** |
+   | :-: | :-: | :-- |
+   | RS | PB0 | Register selection signal. Selection between Instruction register (RS=0) and Data register (RS=1) |
+   | R/W | GND | Write/Read select |
+   | E | PB1 | Signal Enable |
+   | D[3:0] | NOT Connected | Pins for Data |
+   | D[7:4] | PD[7:4] | Pins for Data |
 
-What is the ASCII table? What are the codes/values for uppercase letters `A` to `Z`, lowercase letters `a` to `z`, and numbers `0` to `9` in this table?
+What is the ASCII table? What are the codes/values for uppercase letters `A` to `Z`, lowercase letters `a` to `z`, and numbers `0` to `9` in this table? <br/>
+   =yes
 
    | **Char** | **Decimal** | **Hexadecimal** |
    | :-: | :-: | :-: |
    | `A` | 65 | 0x41 |
-   | `B` |  |  |
-   | ... |  |  |
+   | `B` | 66 | 0x42 |
+   | `Q` | 81 | 0x51 |
    | `a` | 97 | 0x61 |
-   | `b` |  |  |
-   | ... |  |  |
+   | `b` | 98 | 0x62 |
+   | `y` | 121 | 0x79 |
    | `0` | 48 | 0x30 |
-   | `1` |  |  |
-   | ... |  |  |
+   | `1` | 49 | 0x31 |
+   | `DEL` | 127 | 0x7F |
+   | `>` | 62 | 0x3E |
+   
+   
+   
+### PART 3 Table
+   
+   | **Function name** | **Function parameters** | **Description** | **Example** |
+   | :-- | :-- | :-- | :-- |
+   | `lcd_init` | `LCD_DISP_OFF`<br>`LCD_DISP_ON`<br>`LCD_DISP_ON_CURSOR`<br>`LCD_DISP_ON_CURSOR_BLINK` | Display off<br>Display ON, Cursor Off&nbsp;<br>Dipslay ON, Cursor ON&nbsp;<br>Display ON, Cursor Flashing&nbsp; | `lcd_init(LCD_DISP_OFF);`<br>&nbsp;<br>&nbsp;<br>&nbsp; |
+   | `lcd_clrscr` | nothing (void) | Clear display and set cursor to home position | `lcd_clrscr();` |
+   | `lcd_gotoxy` | `uint8_t x`<br>`uint8_t y` | Set cursor to specified position | `lcd_gotoxy(xpos,ypos)` |
+   | `lcd_putc` | `c` | Display character at current cursor position | `lcd_putc(c)` |
+   | `lcd_puts` | `s` | Display string without auto linefeed | `lcd_puts(s)` |
+   | `lcd_command` | `cmd` | Send LCD controller instruction command | `lcd_command(cmd)` |
+   | `lcd_data` | `data` | Send data byte to LCD controller | `lcd_data(data)` |
 
 
 
