@@ -1,8 +1,11 @@
 /* Configuration of SSD signals */
-    GPIO_config_output(&DDRD, SEG_LATCH);
+    	GPIO_config_output(&DDRD, SEG_LATCH);
+    	// DDRB = DDRB or 0010 0000
+    	DDRB = DDRB | (1<<LED_GREEN);
 
 //tooglovanie
 	*reg_name = *reg_name ^ (1<<pin_num);
+	PORTB = PORTB ^ (1<<LED_GREEN);		// ^ je XOR, to zabezpeci tooglovanie
 
 // Pull CLK high
         GPIO_write_high(&PORT_CLK, SEG_CLK);
@@ -15,14 +18,10 @@
         PORTB = PORTB & ~(1<<LED_GREEN);                // << je bit shift
 
 // Configure Push button at port D and enable internal PULL-UP resistor
-    GPIO_config_input_pullup(&DDRD, BUTTON);    
+    	GPIO_config_input_pullup(&DDRD, BUTTON);    
 
 //vsetko co najde ako LED_green nahradi ako PB5
 	#define LED_GREEN   PB5 // AVR pin where green LED is connected 
-
-// Set pin as output in Data Direction Register
-    // DDRB = DDRB or 0010 0000
-    DDRB = DDRB | (1<<LED_GREEN); 
 
 //ak je stlaceny Button, LEDka bude svietit// zevraj je to blbost tak nic teda
 	 if(bit_is_clear(PIND, PD7))
@@ -46,7 +45,7 @@
 
 // Enables interrupts by setting the global interrupt mask
     sei();
-    // cli();   //ziadne prerusenie nepojde/prerusenia nie je povolene
+    // cli();   //ziadne prerusenie nepojde/prerusenia nie su povolene
     
         
 
