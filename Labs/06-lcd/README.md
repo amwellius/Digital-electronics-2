@@ -5,9 +5,9 @@ Link to your `Digital-electronics-2` GitHub repository:
 (https://github.com/amwellius/Digital-electronics-2)
 
 
-### LCD display module
+## LCD display module
 
-0. PREPARATION
+### PREPARATION
 
    | **LCD signal(s)** | **AVR pin(s)** | **Description** |
    | :-: | :-: | :-- |
