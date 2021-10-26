@@ -39,13 +39,13 @@ What is the ASCII table? What are the codes/values for uppercase letters `A` to 
    
    | **Function name** | **Function parameters** | **Description** | **Example** |
    | :-- | :-- | :-- | :-- |
-   | `lcd_init` | `LCD_DISP_OFF`<br>`LCD_DISP_ON`<br>`LCD_DISP_ON_CURSOR`<br>`LCD_DISP_ON_CURSOR_BLINK` | Display off <br> Display ON, Curson Off <br> Display On, Cursor OFf <br> Display ON, Cursor On Flashing&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp; | `lcd_init(LCD_DISP_OFF);`<br>&nbsp;<br>&nbsp;<br>&nbsp; |
-   | `lcd_clrscr` |  | | `lcd_clrscr();` |
-   | `lcd_gotoxy` | | | |
-   | `lcd_putc` | | | |
-   | `lcd_puts` | | | |
-   | `lcd_command` | | | |
-   | `lcd_data` | | | |
+   | `lcd_init` | `LCD_DISP_OFF`<br>`LCD_DISP_ON`<br>`LCD_DISP_ON_CURSOR`<br>`LCD_DISP_ON_CURSOR_BLINK` | Display off<br>Display ON, Cursor Off&nbsp;<br>Dipslay ON, Cursor ON&nbsp;<br>Display ON, Cursor Flashing&nbsp; | `lcd_init(LCD_DISP_OFF);`<br>&nbsp;<br>&nbsp;<br>&nbsp; |
+   | `lcd_clrscr` | nothing (void) | Clear display and set cursor to home position | `lcd_clrscr();` |
+   | `lcd_gotoxy` | `uint8_t x`<br>`uint8_t y` | Set cursor to specified position | `lcd_gotoxy(xpos,ypos)` |
+   | `lcd_putc` | `c` | Display character at current cursor position | `lcd_putc(c)` |
+   | `lcd_puts` | `s` | Display string without auto linefeed | `lcd_puts(s)` |
+   | `lcd_command` | `cmd` | Send LCD controller instruction command | `lcd_command(cmd)` |
+   | `lcd_data` | `data` | Send data byte to LCD controller | `lcd_data(data)` |
 
 
 
