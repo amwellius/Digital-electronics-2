@@ -17,8 +17,8 @@ Link to your `Digital-electronics-2` GitHub repository:
    | D[3:0] | NOT Connected | Pins for Data |
    | D[7:4] | PD[7:4] | Pins for Data |
 
-What is the ASCII table? What are the codes/values for uppercase letters `A` to `Z`, lowercase letters `a` to `z`, and numbers `0` to `9` in this table? <b/>
-   yes
+What is the ASCII table? What are the codes/values for uppercase letters `A` to `Z`, lowercase letters `a` to `z`, and numbers `0` to `9` in this table? <br/>
+   =yes
 
    | **Char** | **Decimal** | **Hexadecimal** |
    | :-: | :-: | :-: |
