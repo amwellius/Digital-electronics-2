@@ -56,7 +56,7 @@ What is the ASCII table? What are the codes/values for uppercase letters `A` to 
 
 2. (Hand-drawn) picture of time signals between ATmega328P and LCD keypad shield (HD44780 driver) when transmitting three character data `De2`.
 
-   ![your figure](images/1_0.png)
+   ![your figure](images/1_0.jpg)
 
 
 ### Stopwatch
