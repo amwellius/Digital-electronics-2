@@ -71,11 +71,26 @@ What is the ASCII table? What are the codes/values for uppercase letters `A` to 
 1. Code listing with syntax highlighting of two custom character definition:
 
 ```c
-/* Variables ---------------------------------------------------------*/
-// Custom character definition
-uint8_t customChar[16] = {
-    // WRITE YOUR CODE HERE
+uint8_t customChar2[8] = {
+    0b11111,
+    0b10010,
+    0b10100,
+    0b11000,
+    0b10100,
+    0b10010,
+    0b10001,
+    0b11111
+};
 
+uint8_t customChar1[8] = {
+    0b10011,
+    0b10111,
+    0b11011,
+    0b11000,
+    0b01000,
+    0b10111,
+    0b11001,
+    0b00011
 };
 ```
 
