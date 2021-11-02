@@ -11,12 +11,22 @@ Link to my `Digital-electronics-2` GitHub repository:
 
    | **Push button** | **PC0[A0] voltage** | **ADC value (calculated)** | **ADC value (measured)** |
    | :-: | :-: | :-: | :-: |
-   | Right  | 0&nbsp;V | 0   |  |
-   | Up     | 0.495&nbsp;V | 101 |  |
-   | Down   |       |     |  |
-   | Left   |       |     |  |
-   | Select |       |     |  |
-   | none   |       |     |  |
+   | Right  | 0&nbsp;V | 0   | 0 |
+   | Up     | 0.495&nbsp;V | 100 |  |
+   | Down   |     1.203 V  | 245    |  |
+   | Left   |     1.970 V  |  402   | |
+   | Select |    3.182 V   |    650 |  |
+   | none   |   5.000 V    |  1023   |  |
+   
+      | **Operation** | **Register(s)** | **Bit(s)** | **Description** |
+   | :-- | :-: | :-: | :-- |
+   | Voltage reference    | ADMUX | REFS1:0 | 01: AVcc voltage reference (5V), ... |
+   | Input channel        | ADMUX | MUX3:0 | 0000: ADC0, 0001: ADC1, ... |
+   | ADC enable           | ADCSRA | ADEN | 1 = ADC ON; 0 = ADC OFF |
+   | Start conversion     | ADCSRA | ADSC | 1 = Start conver.; 0 = No Efect! |
+   | ADC interrupt enable | ADCSRA | ADEI | 1 = Activated all interupts |
+   | ADC clock prescaler  | ADCSRA | ADPS2:0 | 000: Division factor 2, 001: 2, 010: 4, ...|
+   | ADC 10-bit result    | ADCL | ADC9:0 | Represents the result according (Vin x 1024)/Vref |
 
 2. Code listing of ACD interrupt service routine for sending data to the LCD/UART and identification of the pressed button. Always use syntax highlighting and meaningful comments:
 
@@ -41,6 +51,14 @@ ISR(ADC_vect)
 
 ### UART communication
 
+   | **Function name** | **Function parameters** | **Description** | **Example** |
+   | :-- | :-- | :-- | :-- |
+   | `uart_init` | `UART_BAUD_SELECT(9600, F_CPU)` | Initialize UART to 8N1 and set baudrate to 9600&nbsp;Bd | `uart_init(UART_BAUD_SELECT(9600, F_CPU));` |
+   | `uart_getc` | void | Get received byte from ringbuffer | `uart_getc()` |
+   | `uart_putc` | `data` | Put byte to ringbuffer for transmitting via UART | `uart_putc(data)` |
+   | `uart_puts` | `s` | Put string to ringbuffer for transmitting via UART | `uart_puts("Help Me Please! (: ")` |
+   
+   
 1. (Hand-drawn) picture of UART signal when transmitting three character data `De2` in 4800 7O2 mode (7 data bits, odd parity, 2 stop bits, 4800&nbsp;Bd).
 
    ![your figure]()
