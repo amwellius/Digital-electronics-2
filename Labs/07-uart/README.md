@@ -17,6 +17,16 @@ Link to my `Digital-electronics-2` GitHub repository:
    | Left   |     1.970 V  |  402   | |
    | Select |    3.182 V   |    650 |  |
    | none   |   5.000 V    |  1023   |  |
+   
+      | **Operation** | **Register(s)** | **Bit(s)** | **Description** |
+   | :-- | :-: | :-: | :-- |
+   | Voltage reference    | ADMUX | REFS1:0 | 01: AVcc voltage reference (5V), ... |
+   | Input channel        | ADMUX | MUX3:0 | 0000: ADC0, 0001: ADC1, ... |
+   | ADC enable           | ADCSRA | ADEN | 1 = ADC ON; 0 = ADC OFF |
+   | Start conversion     | ADCSRA | ADSC | 1 = Start conver.; 0 = No Efect! |
+   | ADC interrupt enable | ADCSRA | ADEI | 1 = Activated all interupts |
+   | ADC clock prescaler  | ADCSRA | ADPS2:0 | 000: Division factor 2, 001: 2, 010: 4, ...|
+   | ADC 10-bit result    | ADCL | ADC9:0 | Represents the result according (Vin x 1024)/Vref |
 
 2. Code listing of ACD interrupt service routine for sending data to the LCD/UART and identification of the pressed button. Always use syntax highlighting and meaningful comments:
 
