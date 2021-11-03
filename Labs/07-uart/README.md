@@ -25,7 +25,7 @@ Link to my `Digital-electronics-2` GitHub repository:
    | Input channel        | ADMUX | MUX3:0 | 0000: ADC0, 0001: ADC1, ... |
    | ADC enable           | ADCSRA | ADEN | 1 = ADC ON; 0 = ADC OFF |
    | Start conversion     | ADCSRA | ADSC | 1 = Start conver.; 0 = No Efect! |
-   | ADC interrupt enable | ADCSRA | ADEI | 1 = Activated all interupts |
+   | ADC interrupt enable | ADCSRA | ADIE | 1 = Activated all interupts |
    | ADC clock prescaler  | ADCSRA | ADPS2:0 | 000: Division factor 2, 001: 2, 010: 4, ...|
    | ADC 10-bit result    | ADCL | ADC9:0 | Represents the result according (Vin x 1024)/Vref |
 
