@@ -13,11 +13,11 @@ Link to my `Digital-electronics-2` GitHub repository:
    | **Push button** | **PC0[A0] voltage** | **ADC value (calculated)** | **ADC value (measured)** |
    | :-: | :-: | :-: | :-: |
    | Right  | 0&nbsp;V | 0   | 0 |
-   | Up     | 0.495&nbsp;V | 100 |  |
-   | Down   |     1.203 V  | 245    |  |
-   | Left   |     1.970 V  |  402   | |
-   | Select |    3.182 V   |    650 |  |
-   | none   |   5.000 V    |  1023   |  |
+   | Up     | 0.495&nbsp;V | 100 | 99 |
+   | Down   |     1.203 V  | 245    | 255 |
+   | Left   |     1.970 V  |  402   | 408 |
+   | Select |    3.182 V   |    650 | 638 |
+   | none   |   5.000 V    |  1023   | 1023 |
    
       | **Operation** | **Register(s)** | **Bit(s)** | **Description** |
    | :-- | :-: | :-: | :-- |
