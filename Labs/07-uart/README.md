@@ -7,6 +7,7 @@ Link to my `Digital-electronics-2` GitHub repository:
 
 ### Analog-to-Digital Conversion
 
+![your figure](images/0_1.PNG)
 1. Complete table with voltage divider, calculated, and measured ADC values for all five push buttons.
 
    | **Push button** | **PC0[A0] voltage** | **ADC value (calculated)** | **ADC value (measured)** |
