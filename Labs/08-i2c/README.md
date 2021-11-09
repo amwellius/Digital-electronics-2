@@ -17,8 +17,8 @@ Link to this file `Digital-electronics-2` GitHub repository:
 
    | **Frame type** | **8** | **7** | **6** | **5** | **4** | **3** | **2** | **1** | **0** | **Description**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
    | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-- |
-   | Address | | | | | | | | | | |
-   | Data    | | | | | | | | | | |
+   | Address | 6 | 5 | 4 | 3 | 2 | 1 | 0 | R/W | ACK/NACK | Contains address of slave device for communication |
+   | Data    | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 | ACK/NACK | Repeated until all the data bits are transfered properly |
 
 <a name="part1"></a>
 
