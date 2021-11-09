@@ -1,9 +1,26 @@
 # Lab 8: Samuel Košík
 
-Link to my `Digital-electronics-2` GitHub repository:
+Link to this file `Digital-electronics-2` GitHub repository:
 
-(https://github.com/amwellius/Digital-electronics-2)
+(https://github.com/amwellius/Digital-electronics-2/tree/main/Labs/08-i2c)
 
+## Preparation tasks (done before the lab at home)
+
+1. 
+
+   | **Signal** | **MCU pin** | **Arduino pin(s)** |
+   | :-: | :-: | :-: |
+   | SDA (data)  | PCINT12/27 | PC4 |
+   | SCL (clock) | PCINT13/28 | PC5 |
+
+2. 
+
+   | **Frame type** | **8** | **7** | **6** | **5** | **4** | **3** | **2** | **1** | **0** | **Description**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+   | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-- |
+   | Address | 6 | 5 | 4 | 3 | 2 | 1 | 0 | R/W | ACK/NACK | Contains address of slave device for communication |
+   | Data    | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 | ACK/NACK | Repeated until all the data bits are transfered properly |
+
+<a name="part1"></a>
 
 ### Arduino Uno pinout
 
@@ -18,6 +35,15 @@ Link to my `Digital-electronics-2` GitHub repository:
    ![your figure](Images/arduino_uno_pinout.png)
 
 ### I2C
+
+   | **Function name** | **Function parameters** | **Description** | **Example** |
+   | :-- | :-- | :-- | :-- |
+   | `twi_init` | None | Initialize TWI, enable internal pull-up resistors, and set SCL frequency | `twi_init();` |
+   | `twi_start` | `uint8_t slave_address` | Starts communication on TWI bus and sends address of TWI slave | `twi_start((addr<<1)+TWI_READ);` |
+   | `twi_write` | `uint8_t data` | Sends one data byte to TWI slave device | `twi_start(data);` |
+   | `twi_read_ack` | None | Reads one byte from TWI slave device and acknowledges it by ACK | `twi_read_ack();` |
+   | `twi_read_nack` | None | Reads one byte from TWI slave device and acknowledges it by NACK | `twi_read_nack();` |
+   | `twi_stop` | None | Generates stop condition on TWI bus | `twi_stop();` |
 
 1. Code listing of Timer1 overflow interrupt service routine for scanning I2C devices and rendering a clear table on the UART.
 
