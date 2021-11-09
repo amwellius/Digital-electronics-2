@@ -39,11 +39,11 @@ Link to this file `Digital-electronics-2` GitHub repository:
    | **Function name** | **Function parameters** | **Description** | **Example** |
    | :-- | :-- | :-- | :-- |
    | `twi_init` | None | Initialize TWI, enable internal pull-up resistors, and set SCL frequency | `twi_init();` |
-   | `twi_start` |  | <br>&nbsp; | `twi_start((addr<<1)+TWI_READ);` |
-   | `twi_write` |  | <br>&nbsp; |  |
-   | `twi_read_ack` | <br>&nbsp; |  |  |
-   | `twi_read_nack` | <br>&nbsp; |  |  |
-   | `twi_stop` |  |  | `twi_stop();` |
+   | `twi_start` | `uint8_t slave_address` | Starts communication on TWI bus and sends address of TWI slave | `twi_start((addr<<1)+TWI_READ);` |
+   | `twi_write` | `uint8_t data` | Sends one data byte to TWI slave device | `twi_start(data);` |
+   | `twi_read_ack` | None | Reads one byte from TWI slave device and acknowledges it by ACK | `twi_read_ack();` |
+   | `twi_read_nack` | None | Reads one byte from TWI slave device and acknowledges it by NACK | `twi_read_nack();` |
+   | `twi_stop` | None | Generates stop condition on TWI bus | `twi_stop();` |
 
 1. Code listing of Timer1 overflow interrupt service routine for scanning I2C devices and rendering a clear table on the UART.
 
