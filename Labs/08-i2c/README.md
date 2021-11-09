@@ -1,8 +1,8 @@
 # Lab 8: Samuel Košík
 
-Link to my `Digital-electronics-2` GitHub repository:
+Link to this file `Digital-electronics-2` GitHub repository:
 
-(https://github.com/amwellius/Digital-electronics-2)
+(https://github.com/amwellius/Digital-electronics-2/tree/main/Labs/08-i2c)
 
 
 ### Arduino Uno pinout
