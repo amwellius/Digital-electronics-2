@@ -10,8 +10,8 @@ Link to this file `Digital-electronics-2` GitHub repository:
 
    | **Signal** | **MCU pin** | **Arduino pin(s)** |
    | :-: | :-: | :-: |
-   | SDA (data)  |  |  |
-   | SCL (clock) |  |  |
+   | SDA (data)  | PCINT12/27 | PC5 |
+   | SCL (clock) | PCINT13/28 | PC4 |
 
 2. 
 
