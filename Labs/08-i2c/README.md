@@ -36,6 +36,15 @@ Link to this file `Digital-electronics-2` GitHub repository:
 
 ### I2C
 
+   | **Function name** | **Function parameters** | **Description** | **Example** |
+   | :-- | :-- | :-- | :-- |
+   | `twi_init` | None | Initialize TWI, enable internal pull-up resistors, and set SCL frequency | `twi_init();` |
+   | `twi_start` |  | <br>&nbsp; | `twi_start((addr<<1)+TWI_READ);` |
+   | `twi_write` |  | <br>&nbsp; |  |
+   | `twi_read_ack` | <br>&nbsp; |  |  |
+   | `twi_read_nack` | <br>&nbsp; |  |  |
+   | `twi_stop` |  |  | `twi_stop();` |
+
 1. Code listing of Timer1 overflow interrupt service routine for scanning I2C devices and rendering a clear table on the UART.
 
 ```c
