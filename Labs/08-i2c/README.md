@@ -45,7 +45,7 @@ Link to this file `Digital-electronics-2` GitHub repository:
    | `twi_read_nack` | None | Reads one byte from TWI slave device and acknowledges it by NACK | `twi_read_nack();` |
    | `twi_stop` | None | Generates stop condition on TWI bus | `twi_stop();` |
 
-1. Code listing of Timer1 overflow interrupt service routine for scanning I2C devices and rendering a clear table on the UART.
+1. Code listing of Timer1 overflow interrupt service routine for scanning I2C devices *and rendering a clear table on the UART* NIE ze netreba povedal waldecker.
 
 ```c
 /**********************************************************************
