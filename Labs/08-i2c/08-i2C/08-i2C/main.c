@@ -56,7 +56,7 @@ int main(void)
 
     // Put strings to ringbuffer for transmitting via UART
     uart_puts("\r\nScan I2C-bus for devices:\r\n");
-
+    //uart_puts(".0.1.2.3.4.5.6.7.8.9.a.b.c.d.e.f\r\n");
     // Infinite loop
     while (1)
     {
@@ -79,6 +79,7 @@ ISR(TIMER1_OVF_vect)
     static state_t state = STATE_IDLE;  // Current state of the FSM
     static uint8_t addr = 7;            // I2C slave address
     uint8_t result = 1;                 // ACK result from the bus
+    uint8_t data;  
     char uart_string[2] = "00"; // String for converting numbers by itoa()
 
     // FSM
@@ -87,7 +88,15 @@ ISR(TIMER1_OVF_vect)
     // Increment I2C slave address
     case STATE_IDLE:
         addr++;
+      
+        
         // If slave address is between 8 and 119 then move to SEND state
+        if (addr>8 && addr<119) state = STATE_SEND;
+        if (addr >= 120) {
+            addr=0;
+            uart_puts("\r\n***Scan completed***\r\n");
+        }             
+        
 
         break;
     
@@ -101,21 +110,47 @@ ISR(TIMER1_OVF_vect)
         // |a6 a5 a4 a3 a2 a1 a0 R/W|   result   |
         // +------------------------+------------+
         result = twi_start((addr<<1) + TWI_WRITE);
-        twi_stop();
+        
+        
+     //twi_stop();
         /* Test result from I2C bus. If it is 0 then move to ACK state, 
          * otherwise move to IDLE */
+        if (result == 1) {
+            state = STATE_IDLE;
+        }            
+        
+        // is active here
+        if (result == 0) {
+            data = twi_read_ack();
+            /*
+            itoa(data, uart_string, 10);
+            uart_puts("  data: ");
+            uart_puts(uart_string);
+            uart_puts("\r\n");
+            */
+            state = STATE_ACK;
+        }            
 
+        twi_stop();
+        
         break;
 
     // A module connected to the bus was found
     case STATE_ACK:
         // Send info about active I2C slave to UART and move to IDLE
+        itoa(addr, uart_string, 10);
+        uart_puts("adress: ");
+        uart_puts(uart_string);
+        uart_puts("\r\n");
+        
+        state = STATE_IDLE;
 
         break;
 
     // If something unexpected happens then move to IDLE
     default:
         state = STATE_IDLE;
+        uart_puts("Something went wrong!");
         break;
     }
 }
