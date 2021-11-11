@@ -96,12 +96,12 @@ ISR(TIMER1_OVF_vect)
         // is active here
         if (result == 0) {
             data = twi_read_ack();
-            
+            /*
             itoa(data, uart_string, 10);
             uart_puts("  data: ");
             uart_puts(uart_string);
             uart_puts("\r\n");
-            
+            */
             state = STATE_ACK;
         }            
 
