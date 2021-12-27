@@ -46,6 +46,18 @@
 // Enables interrupts by setting the global interrupt mask
     sei();
     // cli();   //ziadne prerusenie nepojde/prerusenia nie su povolene
+
+
+// Initialize UART to asynchronous, 8N1, 9600
+	uart_init(UART_BAUD_SELECT(9600, F_CPU));
+
+
+DDR (Data Direction Register) is used to set the input/output direction of port communication, PORT is the output data port and PIN works for reading input values from the port.\
+
+itoa(tens, lcd_string, 10);     // Convert decimal value to string
+static
+ISR
+UART 8N1 - start+, 8data bits, no parity, stop+, LSB->MSB
     
         
 
